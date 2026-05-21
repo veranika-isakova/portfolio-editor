@@ -1,16 +1,17 @@
-import Link from "next/link"
-import "./globals.css"
+"use client"
 
-export const metadata = {
-  title: "Veranika Isakova",
-  description: "Movie Editor Portfolio",
-}
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import "./globals.css"
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
+  const pathname = usePathname()
+
   return (
     <html lang="en">
       <body className="bg-white text-black">
@@ -18,29 +19,41 @@ export default function RootLayout({
         <header className="flex justify-between items-start px-14 py-10">
 
           <div className="flex items-center gap-5">
+
             <h1 className="text-3xl tracking-tight leading-none">
               Veranika Isakova
             </h1>
 
             <p className="text-lg text-gray-300 leading-none pt-[2px] tracking-wide">
-                Video Editor
+              Video Editor
             </p>
+
           </div>
 
           <nav className="flex gap-8 text-lg">
+
             <Link
               href="/"
-              className="text-black"
+              className={
+                pathname === "/"
+                  ? "text-black"
+                  : "text-gray-300 hover:text-black transition"
+              }
             >
               Home
             </Link>
 
             <Link
               href="/about"
-              className="text-gray-300 hover:text-black transition"
+              className={
+                pathname === "/about"
+                  ? "text-black"
+                  : "text-gray-300 hover:text-black transition"
+              }
             >
               About
             </Link>
+
           </nav>
 
         </header>
