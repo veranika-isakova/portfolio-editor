@@ -20,9 +20,11 @@ export default function RootLayout({
 
           <div className="flex items-center gap-5">
 
-            <h1 className="text-3xl tracking-tight leading-none">
-              Veranika Isakova
-            </h1>
+            <Link href="/about">
+              <h1 className="text-3xl tracking-tight leading-none hover:opacity-70 transition">
+                Veranika Isakova
+              </h1>
+            </Link>
 
             <p className="text-lg text-gray-300 leading-none pt-[2px] tracking-wide">
               Video Editor

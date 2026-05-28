@@ -30,11 +30,12 @@ body {
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 34px;
+  gap: 24px;
 
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 24px;
+  padding-left: 56px;
+  padding-right: 56px;
+
+  padding-top: 0;
 }
 
 /* PROJECT CARD */
@@ -104,7 +105,12 @@ body {
 /* PROJECT PAGE */
 
 .project-page {
-  padding: 24px;
+  padding-left: 56px;
+  padding-right: 56px;
+
+  padding-top: 0;
+
+  padding-bottom: 40px;
 }
 
 .video-wrapper {
@@ -116,7 +122,7 @@ body {
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 24px;
+  gap: 16px;
 }
 
 .screenshots-grid img {
