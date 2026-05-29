@@ -15,7 +15,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white text-black px-10 pt-6 pb-24">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[420px_520px] gap-28 items-start min-h-[75vh] pl-24">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-[420px_520px] gap-12 md:gap-28 items-start min-h-[75vh] px-4 md:px-0">
 
         {/* LEFT SIDE */}
 
@@ -89,13 +89,13 @@ export default function AboutPage() {
 
         {/* RIGHT SIDE */}
 
-        <div className="ml-10">
+        <div className="ml-0 md:ml-10">
 
           <div className="mt-4 space-y-10 text-[#676f80]">
 
             {/* MAIN TEXT */}
 
-          <p className="max-w-[760px] text-[20px] leading-[1.45] text-[#676f80] text-left">
+          <p className="max-w-[760px] text-[20px] leading-[1.45] text-[#676f80] text-center md:text-left">
             Veranika is a film & video editor based in Rotterdam,
             creating cinematic and emotionally driven work across a variety
             of creative projects, from commercial and branded content
@@ -105,7 +105,7 @@ export default function AboutPage() {
 
           {/* CONTACT TEXT */}
 
-          <p className="text-[20px] leading-[1.45] text-[#676f80]">
+          <p className="text-[20px] leading-[1.45] text-[#676f80] text-center md:text-left">
             Feel free to get in touch if you'd like to collaborate.
           </p>
 
