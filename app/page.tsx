@@ -18,6 +18,8 @@ export default function Home() {
             <span className="title-sub">Peaceful Lights Music Show</span>
           </h2>
         </div>
+        <div className="view-circle">
+        </div>
       </Link>
 
       {/* MUSIA */}
@@ -33,6 +35,8 @@ export default function Home() {
             <br />
             <span className="title-sub">Peaceful Lights Music Show</span>
           </h2>
+        </div>
+        <div className="view-circle">
         </div>
       </Link>
 
@@ -50,6 +54,8 @@ export default function Home() {
             <span className="title-sub">atmospheric film</span>
           </h2>
         </div>
+        <div className="view-circle">
+        </div>
       </Link>
 
       {/* LIME */}
@@ -65,6 +71,8 @@ export default function Home() {
             <br />
             <span className="title-sub">studio campaign</span>
           </h2>
+        </div>
+        <div className="view-circle">
         </div>
       </Link>
 

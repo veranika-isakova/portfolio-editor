@@ -20,11 +20,11 @@ export default function RootLayout({
 
           <div className="flex items-center gap-5">
 
-            <Link href="/about">
-              <h1 className="text-3xl tracking-tight leading-none hover:opacity-70 transition">
-                Veranika Isakova
-              </h1>
-            </Link>
+          <Link href="/" className="nav-link">
+            <h1 className="text-3xl tracking-tight leading-none hover:opacity-70 transition">
+              Veranika Isakova
+            </h1>
+          </Link>
 
             <p className="text-lg text-gray-300 leading-none pt-[2px] tracking-wide">
               Video Editor
@@ -36,24 +36,24 @@ export default function RootLayout({
 
             <Link
               href="/"
-              className={
+              className={`nav-link ${
                 pathname === "/"
                   ? "text-black"
                   : "text-gray-300 hover:text-black transition"
-              }
+              }`}
             >
-              Home
+              Work
             </Link>
 
             <Link
               href="/about"
-              className={
+              className={`nav-link ${
                 pathname === "/about"
                   ? "text-black"
                   : "text-gray-300 hover:text-black transition"
-              }
+              }`}
             >
-              About
+              Contact
             </Link>
 
           </nav>

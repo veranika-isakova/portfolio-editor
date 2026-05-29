@@ -15,11 +15,11 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white text-black px-10 pt-6 pb-24">
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-start">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-[420px_520px] gap-28 items-start min-h-[75vh] pl-24">
 
         {/* LEFT SIDE */}
 
-        <div className="flex flex-col items-center -translate-y-6">
+        <div className="flex flex-col items-center">
 
           <img
             src="/images/profile.jpg"
@@ -29,12 +29,17 @@ export default function AboutPage() {
 
           {/* SOCIALS */}
 
-          <div className="mt-10 flex gap-8 text-3xl text-black">
+          <div className="mt-5 flex gap-8 text-3xl text-black">
 
             <a
-              href="https://www.instagram.com/veron.isakova/"
+              href="..."
               target="_blank"
-              className="hover:opacity-60 transition"
+              className="
+                transition-all
+                duration-300
+                hover:text-[#4A4EFF]
+                hover:scale-110
+              "
             >
               <FaInstagram />
             </a>
@@ -42,7 +47,12 @@ export default function AboutPage() {
             <a
               href="https://vimeo.com/user223178973"
               target="_blank"
-              className="hover:opacity-60 transition"
+              className="
+                transition-all
+                duration-300
+                hover:text-[#4A4EFF]
+                hover:scale-110
+              "
             >
               <FaVimeoV />
             </a>
@@ -50,7 +60,12 @@ export default function AboutPage() {
             <a
               href="https://t.me/veranika_isakova"
               target="_blank"
-              className="hover:opacity-60 transition"
+              className="
+                transition-all
+                duration-300
+                hover:text-[#4A4EFF]
+                hover:scale-110
+              "
             >
               <FaTelegramPlane />
             </a>
@@ -58,7 +73,12 @@ export default function AboutPage() {
             <a
               href="https://wa.me/+31614517801"
               target="_blank"
-              className="hover:opacity-60 transition"
+                            className="
+                transition-all
+                duration-300
+                hover:text-[#4A4EFF]
+                hover:scale-110
+              "
             >
               <FaWhatsapp />
             </a>
@@ -69,28 +89,25 @@ export default function AboutPage() {
 
         {/* RIGHT SIDE */}
 
-        <div className="-translate-y-2">
+        <div className="ml-10">
 
-          <div className="flex justify-center">
-            <h1 className="text-5xl font-medium tracking-tight">
-              About me
-            </h1>
-          </div>
-
-          <div className="mt-10 space-y-10 text-[#676f80]">
+          <div className="mt-4 space-y-10 text-[#676f80]">
 
             {/* MAIN TEXT */}
 
-  <p className="max-w-[560px] text-[26px] leading-[1.45] text-[#676f80] text-justify">
-    Film & Video Editor based in Rotterdam, creating cinematic and emotionally driven work across a variety of creative projects.
-    Focused on atmosphere, storytelling and visual rhythm.
-  </p>
+          <p className="max-w-[760px] text-[20px] leading-[1.45] text-[#676f80] text-left">
+            Veranika is a film & video editor based in Rotterdam,
+            creating cinematic and emotionally driven work across a variety
+            of creative projects, from commercial and branded content
+            to documentary and narrative storytelling.
+            Focused on atmosphere, storytelling and visual rhythm.
+          </p>
 
-  {/* CONTACT TEXT */}
+          {/* CONTACT TEXT */}
 
-  <p className="text-[22px] leading-[1.5] text-[#676f80]">
-    Feel free to get in touch if you'd like to collaborate.
-  </p>
+          <p className="text-[20px] leading-[1.45] text-[#676f80]">
+            Feel free to get in touch if you'd like to collaborate.
+          </p>
 
             {/* BUTTON */}
 
@@ -98,7 +115,15 @@ export default function AboutPage() {
 
               <button
                 onClick={() => setIsOpen(true)}
-                className="border-2 border-red-500 text-red-500 px-14 py-3 text-base tracking-[0.28em] hover:bg-red-500 hover:text-white transition"
+                className="
+                  bg-[#4A4EFF]
+                  text-white
+                  px-14
+                  py-4
+                  tracking-[0.28em]
+                  hover:opacity-90
+                  transition
+                "
               >
                 CONTACT
               </button>
@@ -126,7 +151,7 @@ export default function AboutPage() {
             </button>
 
             <h2 className="text-3xl mb-8">
-              Hello! Let&apos;s work together.
+              Hello! Let&apos;s work together
             </h2>
 
             <form
@@ -174,8 +199,20 @@ export default function AboutPage() {
                 className="w-full border border-gray-300 p-3 outline-none resize-none"
               />
 
-              <button className="border border-red-500 text-red-500 px-8 py-3 tracking-[0.2em] hover:bg-red-500 hover:text-white transition">
-                SUBMIT
+              <button
+                type="submit"
+                className="
+                  bg-[#4A4EFF]
+                  text-white
+                  px-14
+                  py-3
+                  text-base
+                  tracking-[0.28em]
+                  hover:opacity-90
+                  transition
+                "
+              >
+                SEND
               </button>
 
             </form>

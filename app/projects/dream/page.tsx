@@ -1,15 +1,13 @@
 export default function DreamPage() {
   const screenshots = [
-    "/images/dream/roof.jpg",
     "/images/dream/dark.jpg",
-    "/images/dream/face.jpg",
-    "/images/dream/light.jpg"
+    "/images/dream/light.jpg",
+    "/images/dream/morning.jpg",
+    "/images/dream/phone.jpg",
   ]
 
   return (
     <main className="project-page">
-
-      {/* VIDEO */}
 
       <div className="video-wrapper">
         <iframe
@@ -19,15 +17,51 @@ export default function DreamPage() {
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        />
       </div>
+
+      <section className="project-intro">
+
+        <img
+          src="/images/dream/hero-shot.png"
+          alt="Dream"
+          className="project-intro-image"
+        />
+
+        <div className="project-intro-text">
+
+          <h2> In a dream maybe</h2>
+
+          <p>
+          Atmospheric film exploring intimacy, memory and emotional distance through cinematic imagery and performance
+          </p>
+
+        </div>
+
+      </section>
 
       {/* SCREENSHOTS */}
 
+      {/* FIRST ROW */}
+
       <div className="screenshots-grid">
-        {screenshots.map((image, index) => (
-          <img key={index} src={image} alt="" />
-        ))}
+        <img src="/images/dream/dark.jpg" alt="" />
+        <img src="/images/dream/light.jpg" alt="" />
+      </div>
+
+      {/* FULL WIDTH IMAGE */}
+
+      <img
+        src="/images/dream/face.jpg"
+        alt=""
+        className="full-width-shot"
+      />
+
+      {/* SECOND ROW */}
+
+      <div className="screenshots-grid">
+        <img src="/images/dream/morning.jpg" alt="" />
+        <img src="/images/dream/phone.jpg" alt="" />
       </div>
 
     </main>
