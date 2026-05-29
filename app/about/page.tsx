@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div className="mt-5 flex gap-8 text-3xl text-black">
 
             <a
-              href="..."
+              href="https://instagram.com/veron.isakova/"
               target="_blank"
               className="
                 transition-all

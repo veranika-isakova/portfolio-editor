@@ -9,30 +9,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
   const pathname = usePathname()
 
   return (
     <html lang="en">
       <body className="bg-white text-black">
 
-        <header className="flex flex-col items-center px-5 py-8 md:px-14 md:py-10">
+        <header className="flex justify-between items-start px-14 py-10 mobile-header">
 
-          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 text-center md:text-left">
+          <div className="flex items-center gap-5 mobile-brand">
 
             <Link href="/" className="nav-link">
-              <h1 className="text-4xl md:text-3xl tracking-tight leading-none hover:opacity-70 transition">
+              <h1 className="text-3xl tracking-tight leading-none hover:opacity-70 transition">
                 Veranika Isakova
               </h1>
             </Link>
 
-            <p className="text-lg text-gray-300 leading-none tracking-wide">
+            <p className="text-lg text-gray-300 leading-none pt-[2px] tracking-wide">
               Video Editor
             </p>
 
           </div>
 
-          <nav className="flex gap-8 text-lg mt-6 md:absolute md:right-14 md:top-10">
+          <nav className="flex gap-8 text-lg mobile-nav">
+
             <Link
               href="/"
               className={`nav-link ${
@@ -54,6 +54,7 @@ export default function RootLayout({
             >
               Contact
             </Link>
+
           </nav>
 
         </header>
