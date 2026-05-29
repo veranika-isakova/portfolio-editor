@@ -392,3 +392,46 @@ body {
 
   color: #6b7280;
 }
+
+@media (max-width: 768px) {
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .project-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-intro-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px 20px;
+  }
+
+  .about-text {
+    font-size: 22px;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+}
