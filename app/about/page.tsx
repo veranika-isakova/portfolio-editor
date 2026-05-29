@@ -113,20 +113,21 @@ export default function AboutPage() {
 
             <div className="flex justify-center pt-2">
 
-              <button
-                onClick={() => setIsOpen(true)}
-                className="
-                  bg-[#4A4EFF]
-                  text-white
-                  px-14
-                  py-4
-                  tracking-[0.28em]
-                  hover:opacity-90
-                  transition
-                "
-              >
-                CONTACT
-              </button>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="
+                bg-[#4A4EFF]
+                text-white
+                px-14
+                py-4
+                tracking-[0.28em]
+                hover:opacity-90
+                transition
+                cursor-pointer
+              "
+            >
+              CONTACT
+            </button>
 
             </div>
 
@@ -205,11 +206,11 @@ export default function AboutPage() {
                   bg-[#4A4EFF]
                   text-white
                   px-14
-                  py-3
-                  text-base
+                  py-4
                   tracking-[0.28em]
                   hover:opacity-90
                   transition
+                  cursor-pointer
                 "
               >
                 SEND
