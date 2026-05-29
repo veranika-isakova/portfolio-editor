@@ -16,9 +16,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-black">
 
-        <header className="flex flex-col md:flex-row md:justify-between md:items-start px-5 md:px-14 py-6 md:py-10 gap-6">
+        <header className="flex flex-col items-center px-5 py-8 md:px-14 md:py-10">
 
-          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-5 text-center md:text-left">
 
             <Link href="/" className="nav-link">
               <h1 className="text-4xl md:text-3xl tracking-tight leading-none hover:opacity-70 transition">
@@ -32,7 +32,7 @@ export default function RootLayout({
 
           </div>
 
-          <nav className="flex gap-8 text-lg">
+          <nav className="flex gap-8 text-lg mt-6 md:absolute md:right-14 md:top-10">
             <Link
               href="/"
               className={`nav-link ${
