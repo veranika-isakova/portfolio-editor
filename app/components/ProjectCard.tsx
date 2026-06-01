@@ -18,6 +18,7 @@ export default function ProjectCard({
 }: Props) {
 
   const [isMobile, setIsMobile] = useState(false)
+  const [revealed, setRevealed] = useState(false)
 
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768)
@@ -25,27 +26,35 @@ export default function ProjectCard({
 
   if (isMobile) {
     return (
-      <div className="project-card">
+      <div
+        className="project-card"
+        onClick={() => setRevealed(true)}
+      >
 
         <img
           src={image}
           alt={title}
         />
 
-        <div className="overlay mobile-overlay">
-          <h2>
-            <span className="title-main">{title}</span>
-            <br />
-            <span className="title-sub">{subtitle}</span>
-          </h2>
-        </div>
+        {revealed && (
+          <div className="overlay mobile-overlay">
 
-        <Link
-          href={href}
-          className="mobile-play"
-        >
-          ▶
-        </Link>
+            <h2>
+              <span className="title-main">{title}</span>
+              <br />
+              <span className="title-sub">{subtitle}</span>
+            </h2>
+
+            <Link
+              href={href}
+              className="mobile-play"
+              onClick={(e) => e.stopPropagation()}
+            >
+              VIEW
+            </Link>
+
+          </div>
+        )}
 
       </div>
     )
