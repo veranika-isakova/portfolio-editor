@@ -1,81 +1,37 @@
-import Link from "next/link";
+import ProjectCard from "./components/ProjectCard"
 
 export default function Home() {
   return (
     <main className="home-grid">
 
-      {/* PAVEL */}
-      <Link href="/projects/pavel" className="project-card">
-        <img
-          src="/images/pavel/cover.jpg"
-          alt="Pavel"
-        />
+      <ProjectCard
+        href="/projects/pavel"
+        image="/images/pavel/cover.jpg"
+        title="Pavel Fakhrtdinov"
+        subtitle="Peaceful Lights Music Show"
+      />
 
-        <div className="overlay">
-          <h2>
-            <span className="title-main">Pavel Fakhrtdinov</span>
-            <br />
-            <span className="title-sub">Peaceful Lights Music Show</span>
-          </h2>
-        </div>
-        <div className="view-circle">
-        </div>
-      </Link>
+      <ProjectCard
+        href="/projects/musia"
+        image="/images/musia/cover.jpg"
+        title="Musia Totibadze"
+        subtitle="Peaceful Lights Music Show"
+      />
 
-      {/* MUSIA */}
-      <Link href="/projects/musia" className="project-card">
-        <img
-          src="/images/musia/cover.jpg"
-          alt="Musia"
-        />
+      <ProjectCard
+        href="/projects/dream"
+        image="/images/dream/cover.jpg"
+        title="in a dream maybe"
+        subtitle="atmospheric film"
+      />
 
-        <div className="overlay">
-          <h2>
-            <span className="title-main">Musia Totibadze</span>
-            <br />
-            <span className="title-sub">Peaceful Lights Music Show</span>
-          </h2>
-        </div>
-        <div className="view-circle">
-        </div>
-      </Link>
-
-      {/* DREAM */}
-      <Link href="/projects/dream" className="project-card">
-        <img
-          src="/images/dream/cover.jpg"
-          alt="Dream"
-        />
-
-        <div className="overlay">
-          <h2>
-            <span className="title-main">in a dream maybe</span>
-            <br />
-            <span className="title-sub">atmospheric film</span>
-          </h2>
-        </div>
-        <div className="view-circle">
-        </div>
-      </Link>
-
-      {/* LIME */}
-      <Link href="/projects/lime" className="project-card">
-        <img
-          src="/images/lime/cover.jpg"
-          alt="Lime"
-        />
-
-        <div className="overlay">
-          <h2>
-            <span className="title-main">lime</span>
-            <br />
-            <span className="title-sub">studio campaign</span>
-          </h2>
-        </div>
-        <div className="view-circle">
-        </div>
-      </Link>
+      <ProjectCard
+        href="/projects/lime"
+        image="/images/lime/cover.jpg"
+        title="lime"
+        subtitle="studio campaign"
+      />
 
     </main>
-  );
+  )
 }
