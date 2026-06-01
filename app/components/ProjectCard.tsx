@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 
 type Props = {
   href: string
@@ -47,6 +47,8 @@ export default function ProjectCard({
 
   const openCard = () => {
 
+    if (revealed) return
+
     window.dispatchEvent(
       new Event("close-project-card")
     )
@@ -58,42 +60,40 @@ export default function ProjectCard({
 
     return (
 
-        <div
+      <div
         className="project-card"
         onClick={openCard}
-        >
+      >
 
-        {!revealed ? (
+        <img
+          src={image}
+          alt={title}
+          draggable={false}
+        />
 
-            <img
-            src={image}
-            alt={title}
-            draggable={false}
-            />
+        {revealed && (
 
-        ) : (
-
-            <div className="mobile-overlay">
+          <div className="mobile-overlay">
 
             <h2>
-                <span className="title-main">{title}</span>
-                <br />
-                <span className="title-sub">{subtitle}</span>
+              <span className="title-main">{title}</span>
+              <br />
+              <span className="title-sub">{subtitle}</span>
             </h2>
 
             <Link
-                href={href}
-                className="mobile-play"
-                onClick={(e) => e.stopPropagation()}
+              href={href}
+              className="mobile-play"
+              onClick={(e) => e.stopPropagation()}
             >
-                VIEW
+              VIEW
             </Link>
 
-            </div>
+          </div>
 
         )}
 
-        </div>
+      </div>
 
     )
   }
