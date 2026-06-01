@@ -30,30 +30,11 @@ export default function ProjectCard({
   useEffect(() => {
     setRevealed(false)
   }, [pathname])
-
-  useEffect(() => {
-
-    const closeCard = () => {
-      setRevealed(false)
-    }
-
-    window.addEventListener("close-project-card", closeCard)
-
-    return () => {
-      window.removeEventListener("close-project-card", closeCard)
-    }
-
-  }, [])
-
+  
   const openCard = () => {
-
-    if (revealed) return
-
-    window.dispatchEvent(
-      new Event("close-project-card")
-    )
-
-    setRevealed(true)
+    if (!revealed) {
+        setRevealed(true)
+    }
   }
 
   if (isMobile) {
