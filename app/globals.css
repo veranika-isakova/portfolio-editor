@@ -410,11 +410,24 @@ body {
     aspect-ratio: 16 / 10;
   }
 
-  .view-circle {
-    width: 28px;
-    height: 28px;
+  .project-card {
+    touch-action: pan-y;
+  }
 
-    font-size: 0;
+  .view-circle {
+    width: 72px;
+    height: 72px;
+
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .view-circle::before {
+    content: "▶";
+
+    color: white;
+
+    font-size: 24px;
   }
 
   .mobile-header {
