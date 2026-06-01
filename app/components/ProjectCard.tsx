@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 type Props = {
   href: string
@@ -17,6 +18,8 @@ export default function ProjectCard({
   subtitle,
 }: Props) {
 
+  const pathname = usePathname()
+
   const [isMobile, setIsMobile] = useState(false)
   const [revealed, setRevealed] = useState(false)
 
@@ -24,11 +27,39 @@ export default function ProjectCard({
     setIsMobile(window.innerWidth <= 768)
   }, [])
 
+  useEffect(() => {
+    setRevealed(false)
+  }, [pathname])
+
+  useEffect(() => {
+
+    const closeCard = () => {
+      setRevealed(false)
+    }
+
+    window.addEventListener("close-project-card", closeCard)
+
+    return () => {
+      window.removeEventListener("close-project-card", closeCard)
+    }
+
+  }, [])
+
+  const openCard = () => {
+
+    window.dispatchEvent(
+      new Event("close-project-card")
+    )
+
+    setRevealed(true)
+  }
+
   if (isMobile) {
+
     return (
       <div
         className="project-card"
-        onClick={() => setRevealed(true)}
+        onClick={openCard}
       >
 
         <img
@@ -37,6 +68,7 @@ export default function ProjectCard({
         />
 
         {revealed && (
+
           <div className="overlay mobile-overlay">
 
             <h2>
@@ -54,6 +86,7 @@ export default function ProjectCard({
             </Link>
 
           </div>
+
         )}
 
       </div>
@@ -61,6 +94,7 @@ export default function ProjectCard({
   }
 
   return (
+
     <Link href={href} className="project-card">
 
       <img
@@ -79,5 +113,6 @@ export default function ProjectCard({
       <div className="view-circle" />
 
     </Link>
+
   )
 }
