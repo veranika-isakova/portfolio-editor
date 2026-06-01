@@ -57,39 +57,44 @@ export default function ProjectCard({
   if (isMobile) {
 
     return (
-      <div
+
+        <div
         className="project-card"
         onClick={openCard}
-      >
+        >
 
-        <img
-          src={image}
-          alt={title}
-        />
+        {!revealed ? (
 
-        {revealed && (
+            <img
+            src={image}
+            alt={title}
+            draggable={false}
+            />
 
-          <div className="overlay mobile-overlay">
+        ) : (
+
+            <div className="mobile-overlay">
 
             <h2>
-              <span className="title-main">{title}</span>
-              <br />
-              <span className="title-sub">{subtitle}</span>
+                <span className="title-main">{title}</span>
+                <br />
+                <span className="title-sub">{subtitle}</span>
             </h2>
 
             <Link
-              href={href}
-              className="mobile-play"
-              onClick={(e) => e.stopPropagation()}
+                href={href}
+                className="mobile-play"
+                onClick={(e) => e.stopPropagation()}
             >
-              VIEW
+                VIEW
             </Link>
 
-          </div>
+            </div>
 
         )}
 
-      </div>
+        </div>
+
     )
   }
 
