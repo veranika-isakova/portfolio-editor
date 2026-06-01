@@ -47,7 +47,7 @@ body {
 
   display: block;
 
-  background: #000;
+  background: white;
 }
 
 .project-card img {
@@ -399,19 +399,39 @@ body {
 
   .home-grid {
     grid-template-columns: 1fr;
-
     gap: 16px;
 
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .project-card img {
-    aspect-ratio: 16 / 10;
-  }
-
   .project-card {
     touch-action: pan-y;
+    background: white;
+  }
+
+  .project-card img {
+    aspect-ratio: 16 / 10;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+  }
+
+  /* отключаем hover-эффекты iPhone */
+
+  .project-card:hover img {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .project-card:hover .overlay {
+    opacity: 0 !important;
+  }
+
+  .project-card:hover .view-circle {
+    opacity: 0 !important;
+    transform: scale(0) !important;
   }
 
   .view-circle {
@@ -502,6 +522,7 @@ body {
   .about-section {
     display: flex;
     flex-direction: column;
+
     align-items: center;
 
     text-align: center;
@@ -512,13 +533,17 @@ body {
   .profile-image {
     width: 100%;
     max-width: 280px;
+
     margin: 0 auto 32px;
+
     display: block;
   }
 
   .about-text {
     max-width: 320px;
+
     margin: 0 auto;
+
     text-align: center;
   }
 
@@ -535,7 +560,7 @@ body {
     height: 28px;
   }
 
-  /* GENERAL */
+  /* TYPOGRAPHY */
 
   .title-main {
     font-size: 22px;
@@ -544,6 +569,8 @@ body {
   .title-sub {
     font-size: 16px;
   }
+
+  /* MOBILE PROJECT CARD */
 
   .mobile-overlay {
     position: absolute;
