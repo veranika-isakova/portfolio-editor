@@ -42,24 +42,13 @@ body {
 
 .project-card {
   position: relative;
-
   overflow: hidden;
-
-  display: block;
-
   background: white;
 }
 
 .project-card img {
-  width: 100%;
-
-  aspect-ratio: 16 / 10;
-
-  object-fit: cover;
-
   display: block;
-
-  transition: opacity 0.3s ease;
+  width: 100%;
 }
 
 .project-card:hover img {
