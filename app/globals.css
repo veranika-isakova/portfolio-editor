@@ -577,7 +577,7 @@ body {
 
     inset: 0;
 
-    background: white;
+    background: red !important;
 
     display: flex;
     flex-direction: column;

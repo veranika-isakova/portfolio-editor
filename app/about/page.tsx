@@ -96,10 +96,9 @@ export default function AboutPage() {
             {/* MAIN TEXT */}
 
           <p className="max-w-[760px] text-[20px] leading-[1.45] text-[#676f80] text-center md:text-left">
-            Veranika is a film & video editor based in Rotterdam,
-            creating cinematic and emotionally driven work across a variety
-            of creative projects, from commercial and branded content
-            to documentary and narrative storytelling.
+            Veranika is a film & video editor based in Rotterdam, creating cinematic 
+            and emotionally driven work across a variety of creative projects, 
+            from commercial and branded content to documentary and narrative film.
             Focused on atmosphere, storytelling and visual rhythm.
           </p>
 
