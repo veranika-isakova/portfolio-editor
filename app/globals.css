@@ -567,6 +567,7 @@ body {
     inset: 0;
 
     background: white;
+    box-shadow: 0 0 0 5px white;
 
     display: flex;
     flex-direction: column;
