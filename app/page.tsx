@@ -12,17 +12,17 @@ export default function Home() {
       />
 
       <ProjectCard
-        href="/projects/musia"
-        image="/images/musia/cover.jpg"
-        title="Musia Totibadze"
-        subtitle="Peaceful Lights Music Show"
-      />
-
-      <ProjectCard
         href="/projects/dream"
         image="/images/dream/cover.jpg"
         title="in a dream maybe"
         subtitle="atmospheric film"
+      />
+
+      <ProjectCard
+        href="/projects/musia"
+        image="/images/musia/cover.jpg"
+        title="Musia Totibadze"
+        subtitle="Peaceful Lights Music Show"
       />
 
       <ProjectCard
