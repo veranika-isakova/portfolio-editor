@@ -383,7 +383,9 @@ body {
   /* HOME */
 
   .home-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+
     gap: 16px;
 
     padding-left: 20px;
