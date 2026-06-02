@@ -31,7 +31,32 @@ export default function ProjectCard({
     setRevealed(false)
   }, [pathname])
 
+  useEffect(() => {
+
+    const closeCard = () => {
+      setRevealed(false)
+    }
+
+    window.addEventListener(
+      "close-project-card",
+      closeCard
+    )
+
+    return () => {
+      window.removeEventListener(
+        "close-project-card",
+        closeCard
+      )
+    }
+
+  }, [])
+
   const openCard = () => {
+
+    window.dispatchEvent(
+      new Event("close-project-card")
+    )
+
     setRevealed(true)
   }
 
@@ -81,7 +106,10 @@ export default function ProjectCard({
 
   return (
 
-    <Link href={href} className="project-card">
+    <Link
+      href={href}
+      className="project-card"
+    >
 
       <img
         src={image}
