@@ -114,10 +114,6 @@ body {
   display: block;
 }
 
-.project-card:hover img {
-  opacity: 0;
-}
-
 .project-card {
   position: relative;
   overflow: hidden;
