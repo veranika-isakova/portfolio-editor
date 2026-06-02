@@ -63,16 +63,16 @@ export default function ProjectCard({
         onClick={openCard}
       >
 
-        <img
-          src={image}
-          alt={title}
-          draggable={false}
-        />
+        {!revealed && (
+            <img
+                src={image}
+                alt={title}
+                draggable={false}
+            />
+            )}
 
         {revealed && (
-
           <div className="mobile-overlay">
-
             <h2>
               <span className="title-main">{title}</span>
               <br />
