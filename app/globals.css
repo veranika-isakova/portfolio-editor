@@ -394,6 +394,7 @@ body {
 
   .project-card {
     aspect-ratio: 16 / 10;
+    min-height: 220px;
   }
 
   .project-card img {
