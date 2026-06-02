@@ -31,26 +31,7 @@ export default function ProjectCard({
     setRevealed(false)
   }, [pathname])
 
-  useEffect(() => {
-
-    const closeCard = () => {
-      setRevealed(false)
-    }
-
-    window.addEventListener("close-project-card", closeCard)
-
-    return () => {
-      window.removeEventListener("close-project-card", closeCard)
-    }
-
-  }, [])
-
   const openCard = () => {
-
-    window.dispatchEvent(
-      new Event("close-project-card")
-    )
-
     setRevealed(true)
   }
 
@@ -63,13 +44,7 @@ export default function ProjectCard({
         onClick={openCard}
       >
 
-        <img
-          src={image}
-          alt={title}
-          draggable={false}
-        />
-
-        {revealed && (
+        {revealed ? (
 
           <div className="mobile-overlay">
 
@@ -88,6 +63,14 @@ export default function ProjectCard({
             </Link>
 
           </div>
+
+        ) : (
+
+          <img
+            src={image}
+            alt={title}
+            draggable={false}
+          />
 
         )}
 
