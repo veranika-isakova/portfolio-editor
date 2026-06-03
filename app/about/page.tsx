@@ -247,6 +247,7 @@ export default function AboutPage() {
                 type="text"
                 name="subject"
                 placeholder="Subject"
+                autoComplete="off"
                 className="w-full border border-gray-300 p-3 outline-none"
               />
 
