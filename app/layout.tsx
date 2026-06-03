@@ -26,7 +26,7 @@ export default function RootLayout({
             </Link>
 
             <p className="text-lg text-gray-300 leading-none pt-[2px] tracking-wide">
-              Video Editor
+              Film Editor
             </p>
 
           </div>
