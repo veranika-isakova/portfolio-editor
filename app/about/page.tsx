@@ -268,7 +268,7 @@ export default function AboutPage() {
                   cursor-pointer
                 "
               >
-                {isSubmitting ? "SENDING..." : "SEND"}
+                SEND
               </button>
 
             </form>
