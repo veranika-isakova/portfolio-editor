@@ -30,6 +30,14 @@ export default function AboutPage() {
 
     const formData = new FormData(e.currentTarget)
 
+    const email = formData.get("email")?.toString().trim()
+    const message = formData.get("message")?.toString().trim()
+
+    if (!email || !message) {
+      setIsSubmitting(false)
+      return
+    }
+
     const response = await fetch(
       "https://formspree.io/f/xjgzyblw",
       {
@@ -231,6 +239,7 @@ export default function AboutPage() {
                 autoCorrect="off"
                 autoCapitalize="none"
                 spellCheck={false}
+                required
                 className="w-full border border-gray-300 p-3 outline-none"
               />
 
@@ -245,6 +254,7 @@ export default function AboutPage() {
                 name="message"
                 placeholder="Project Description"
                 rows={4}
+                required
                 className="w-full border border-gray-300 p-3 outline-none resize-none"
               />
 
