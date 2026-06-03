@@ -11,6 +11,44 @@ import {
 
 export default function AboutPage() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSent, setIsSent] = useState(false)
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault()
+
+    setIsSubmitting(true)
+
+    const formData = new FormData(e.currentTarget)
+
+    const response = await fetch(
+      "https://formspree.io/f/xjgzyblw",
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    )
+
+    setIsSubmitting(false)
+
+    if (response.ok) {
+      setIsSent(true)
+      e.currentTarget.reset()
+
+      setTimeout(() => {
+        setIsOpen(false)
+        setIsSent(false)
+      }, 2000)
+    }
+    else {
+      alert("Something went wrong. Please try again.")
+    }
+  }
 
   return (
     <main className="min-h-screen bg-white text-black px-10 pt-6 pb-24">
@@ -155,8 +193,7 @@ export default function AboutPage() {
             </h2>
 
             <form
-              action="https://formspree.io/f/xjgzyblw"
-              method="POST"
+              onSubmit={handleSubmit}
               autoComplete="off"
               className="space-y-7"
             >
@@ -182,9 +219,8 @@ export default function AboutPage() {
               <input
                 type="email"
                 name="email"
-                inputMode="email"
-                enterKeyHint="next"
                 placeholder="Email Address"
+                autoComplete="off"
                 autoCorrect="off"
                 autoCapitalize="none"
                 spellCheck={false}
@@ -205,8 +241,15 @@ export default function AboutPage() {
                 className="w-full border border-gray-300 p-3 outline-none resize-none"
               />
 
+              {isSent && (
+                <p className="text-green-600">
+                  Thank you! Your message has been sent.
+                </p>
+              )}
+
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="
                   bg-[#4A4EFF]
                   text-white
@@ -218,7 +261,7 @@ export default function AboutPage() {
                   cursor-pointer
                 "
               >
-                SEND
+                {isSubmitting ? "SENDING..." : "SEND"}
               </button>
 
             </form>
