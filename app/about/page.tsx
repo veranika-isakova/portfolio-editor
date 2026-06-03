@@ -157,6 +157,7 @@ export default function AboutPage() {
             <form
               action="https://formspree.io/f/xjgzyblw"
               method="POST"
+              autoComplete="off"
               className="space-y-7"
             >
 
@@ -182,6 +183,10 @@ export default function AboutPage() {
                 type="email"
                 name="email"
                 placeholder="Email Address"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="none"
+                spellCheck={false}
                 className="w-full border border-gray-300 p-3 outline-none"
               />
 
