@@ -158,6 +158,16 @@ export default function AboutPage() {
               action="https://formspree.io/f/xjgzyblw"
               method="POST"
               autoComplete="off"
+              onSubmit={(e) => {
+                const active = document.activeElement as HTMLElement | null
+
+                if (
+                  active &&
+                  active.tagName !== "BUTTON"
+                ) {
+                  e.preventDefault()
+                }
+              }}
               className="space-y-7"
             >
 
