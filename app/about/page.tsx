@@ -19,6 +19,13 @@ export default function AboutPage() {
   ) => {
     e.preventDefault()
 
+    const submitter = (e.nativeEvent as SubmitEvent)
+      .submitter as HTMLElement | null
+
+    if (!submitter) {
+      return
+    }
+
     setIsSubmitting(true)
 
     const formData = new FormData(e.currentTarget)
