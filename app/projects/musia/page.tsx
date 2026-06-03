@@ -10,14 +10,14 @@ export default function MusiaPage() {
     <main className="project-page">
 
       <div className="video-wrapper">
-        <iframe
-          src="https://player.vimeo.com/video/1194015939?h=630bee9bb2"
-          width="100%"
-          height="700"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-        />
+      <iframe
+        src="https://player.vimeo.com/video/1194015939?h=630bee9bb2&title=0&byline=0&portrait=0&badge=0"
+        width="100%"
+        height="700"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      />
       </div>
 
       <section className="project-intro">
