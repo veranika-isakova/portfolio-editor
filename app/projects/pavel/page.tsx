@@ -11,7 +11,7 @@ export default function PavelPage() {
 
       <div className="video-wrapper">
         <iframe
-          src="https://player.vimeo.com/video/1193989740"
+          src="https://player.vimeo.com/video/1193989740?h=f8e302a771&title=0&byline=0&portrait=0&badge=0"
           width="100%"
           height="700"
           frameBorder="0"

@@ -11,7 +11,7 @@ export default function MusiaPage() {
 
       <div className="video-wrapper">
         <iframe
-          src="https://player.vimeo.com/video/1194015939"
+          src="https://player.vimeo.com/video/1194015939?h=630bee9bb2"
           width="100%"
           height="700"
           frameBorder="0"
