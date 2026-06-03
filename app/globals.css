@@ -99,6 +99,9 @@ body {
 
 .video-wrapper {
   margin-bottom: 16px;
+
+  padding-left: 56px;
+  padding-right: 56px;
 }
 
 .screenshots-grid {
