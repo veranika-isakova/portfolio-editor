@@ -35,7 +35,7 @@ export default function RootLayout({
 
           </div>
 
-          <nav className="flex gap-8 text-lg mobile-nav">
+          <nav className="flex gap-8 text-lg mobile-nav pt-[10px]">
 
             <Link
               href="/"
