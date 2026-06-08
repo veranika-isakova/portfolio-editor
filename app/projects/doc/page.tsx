@@ -42,7 +42,7 @@ export default function DreamPage() {
       {/* FULL WIDTH IMAGE */}
 
       <img
-        src="/images/doc/poster.jpg"
+        src="/images/doc/poster.png"
         alt="doc"
         className="full-width-shot"
       />

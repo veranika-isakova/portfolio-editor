@@ -43,7 +43,7 @@ export default function Home() {
         href="/projects/doc"
         image="/images/doc/cover.jpg"
         title="Ozharovsky"
-        subtitle="documentary"
+        subtitle="Documentary film"
       />
 
     </main>
