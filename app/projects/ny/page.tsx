@@ -61,7 +61,7 @@ export default function DreamPage() {
 
       <div className="screenshots-grid">
         <img src="/images/ny/alone.jpg" alt="" />
-        <img src="/images/ny/ny.jpg" alt="" />
+        <img src="/images/ny/street.jpg" alt="" />
       </div>
 
     </main>
