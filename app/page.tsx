@@ -5,6 +5,20 @@ export default function Home() {
     <main className="home-grid">
 
       <ProjectCard
+        href="/projects/ny"
+        image="/images/ny/cover.jpg"
+        title="city drift"
+        subtitle="cinematic portrait film"
+      />
+
+      <ProjectCard
+        href="/projects/doc"
+        image="/images/doc/cover.jpg"
+        title="Ozharovsky"
+        subtitle="Documentary film"
+      />
+
+      <ProjectCard
         href="/projects/pavel"
         image="/images/pavel/cover.jpg"
         title="Pavel Fakhrtdinov"
@@ -30,20 +44,6 @@ export default function Home() {
         image="/images/lime/cover.jpg"
         title="lime"
         subtitle="studio campaign"
-      />
-
-      <ProjectCard
-        href="/projects/ny"
-        image="/images/ny/cover.jpg"
-        title="city drift"
-        subtitle="cinematic portrait film"
-      />
-
-      <ProjectCard
-        href="/projects/doc"
-        image="/images/doc/cover.jpg"
-        title="Ozharovsky"
-        subtitle="Documentary film"
       />
 
     </main>

@@ -38,8 +38,8 @@ export default function DreamPage() {
       {/* FIRST ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/doc/cave.jpg" alt="" />
         <img src="/images/doc/radiation.jpg" alt="" />
+        <img src="/images/doc/cave.jpg" alt="" />
       </div>
 
       {/* FULL WIDTH IMAGE */}
@@ -53,8 +53,8 @@ export default function DreamPage() {
       {/* SECOND ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/doc/f.jpg" alt="" />
         <img src="/images/doc/device.jpg" alt="" />
+        <img src="/images/doc/f.jpg" alt="" />
       </div>
 
     </main>
