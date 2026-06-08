@@ -23,7 +23,7 @@ export default function DreamPage() {
       <section className="project-intro">
 
         <img
-          src="/images/ny/hero.png"
+          src="/images/ny/hero.jpg"
           alt="NY"
           className="project-intro-image"
         />
@@ -45,8 +45,8 @@ export default function DreamPage() {
       {/* FIRST ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/ny/alone.jpg" alt="" />
         <img src="/images/ny/face.jpg" alt="" />
+        <img src="/images/ny/alone.jpg" alt="" />
       </div>
 
       {/* FULL WIDTH IMAGE */}
