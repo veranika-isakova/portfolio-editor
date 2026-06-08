@@ -27,8 +27,9 @@ export default function RootLayout({
 
             <p className="text-lg text-gray-300 leading-none pt-[2px] tracking-wide">
               Film Editor
-              <span className="absolute -bottom-3 left-0 w-10 h-px bg-blue-600" />
             </p>
+
+            <div className="mt-3 h-px w-8 bg-[#4A4EFF]" />
 
           </div>
 
