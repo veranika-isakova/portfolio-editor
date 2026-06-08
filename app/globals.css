@@ -36,7 +36,7 @@ body {
   padding-right: 56px;
 
   padding-top: 0;
-  padding-bottom: 100px;
+  padding-bottom: 16px;
 }
 
 /* PROJECT CARD */
@@ -405,7 +405,7 @@ body {
 
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 16px;
   }
 
   .project-card {
