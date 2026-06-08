@@ -7,8 +7,8 @@ export default function Home() {
       <ProjectCard
         href="/projects/ny"
         image="/images/ny/cover.jpg"
-        title="city drift"
-        subtitle="cinematic portrait film"
+        title="City drift"
+        subtitle="Cinematic portrait film"
       />
 
       <ProjectCard
@@ -35,15 +35,15 @@ export default function Home() {
       <ProjectCard
         href="/projects/dream"
         image="/images/dream/cover.jpg"
-        title="in a dream maybe"
-        subtitle="atmospheric film"
+        title="In a dream maybe"
+        subtitle="Atmospheric film"
       />
 
       <ProjectCard
         href="/projects/lime"
         image="/images/lime/cover.jpg"
-        title="lime"
-        subtitle="studio campaign"
+        title="Lime"
+        subtitle="Studio campaign"
       />
 
     </main>
