@@ -23,7 +23,8 @@ export default function DreamPage() {
 
           <p>
           A documentary film about nuclear physicist and environmental activist Andrey Ozharovsky.
-
+          </p>
+          <p>
           Directed by Dmitry Grigoriev.
           </p>
           <span className="coming-soon">Coming Soon</span>
@@ -53,7 +54,7 @@ export default function DreamPage() {
 
       <div className="screenshots-grid">
         <img src="/images/doc/f.jpg" alt="" />
-        <img src="/images/doc/walk.jpg" alt="" />
+        <img src="/images/doc/device.jpg" alt="" />
       </div>
 
     </main>

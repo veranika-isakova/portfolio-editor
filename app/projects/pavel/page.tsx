@@ -38,7 +38,7 @@ export default function PavelPage() {
 
             <p className="text-center text-[#676f80] leading-[1.7]">
               Live performance recorded as part of a New Year concert
-              featuring singer-songwriter Pavel Fakhrtdinov
+              featuring singer-songwriter Pavel Fakhrtdinov.
             </p>
 
           </div>
