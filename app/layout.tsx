@@ -25,11 +25,13 @@ export default function RootLayout({
               </h1>
             </Link>
 
-            <p className="text-lg text-gray-300 leading-none pt-[2px] tracking-wide">
-              Film Editor
-            </p>
+            <div className="mt-2 flex flex-col items-center">
+              <p className="text-lg text-gray-300 leading-none pt-[8px] tracking-wide">
+                Film Editor
+              </p>
 
-            <div className="mt-3 h-px w-8 bg-[#4A4EFF]" />
+              <div className="mt-2 h-[2px] w-8 bg-[#4A4EFF]" />
+            </div>
 
           </div>
 
