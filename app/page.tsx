@@ -32,6 +32,13 @@ export default function Home() {
         subtitle="studio campaign"
       />
 
+      <ProjectCard
+        href="/projects/ny"
+        image="/images/ny/cover.jpg"
+        title="city drift"
+        subtitle="cinematic portrait film"
+      />
+
     </main>
   )
 }
