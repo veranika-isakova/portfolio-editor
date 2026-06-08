@@ -55,6 +55,15 @@ body {
   transform: scale(1.03);
 }
 
+.coming-soon {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
 /* OVERLAY */
 
 .overlay {

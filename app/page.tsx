@@ -39,6 +39,13 @@ export default function Home() {
         subtitle="cinematic portrait film"
       />
 
+      <ProjectCard
+        href="/projects/doc"
+        image="/images/doc/cover.jpg"
+        title="Ozharovsky"
+        subtitle="documentary"
+      />
+
     </main>
   )
 }

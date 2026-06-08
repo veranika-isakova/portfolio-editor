@@ -31,7 +31,7 @@ export default function LimePage() {
           <h2> Lime</h2>
 
           <p>
-          Visual campaign film for LIME Studio Collection
+          Visual campaign film for LIME Studio Collection.
           </p>
 
         </div>

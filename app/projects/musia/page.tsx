@@ -34,7 +34,7 @@ export default function MusiaPage() {
 
           <p>
             Live performance recorded as part of a New Year concert
-            featuring singer and actress Musia Totibadze
+            featuring singer and actress Musia Totibadze.
           </p>
 
         </div>

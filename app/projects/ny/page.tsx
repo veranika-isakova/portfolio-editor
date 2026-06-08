@@ -33,7 +33,7 @@ export default function DreamPage() {
           <h2>City drift</h2>
 
           <p>
-          Cinematic portrait film exploring moments of stillness within the rhythm of New York City
+          Cinematic portrait film exploring moments of stillness within the rhythm of New York City.
           </p>
 
         </div>

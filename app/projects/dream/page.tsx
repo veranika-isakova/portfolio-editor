@@ -33,7 +33,7 @@ export default function DreamPage() {
           <h2> In a dream maybe</h2>
 
           <p>
-          Atmospheric film exploring intimacy, memory and emotional distance through cinematic imagery and performance
+          Atmospheric film exploring intimacy, memory and emotional distance through cinematic imagery and performance.
           </p>
 
         </div>
