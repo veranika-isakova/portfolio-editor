@@ -41,8 +41,8 @@ export default function LimePage() {
       {/* FIRST ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/lime/sleep.jpg" alt="" />
-        <img src="/images/lime/twins.jpg" alt="" />
+        <img src="/images/lime/sleep.jpg" alt="" loading="lazy" />
+        <img src="/images/lime/twins.jpg" alt="" loading="lazy" />
       </div>
 
       {/* FULL WIDTH HERO SHOT */}
@@ -56,8 +56,8 @@ export default function LimePage() {
       {/* SECOND ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/lime/fish.jpg" alt="" />
-        <img src="/images/lime/drone.jpg" alt="" />
+        <img src="/images/lime/fish.jpg" alt="" loading="lazy" />
+        <img src="/images/lime/drone.jpg" alt="" loading="lazy" />
       </div>
 
     </main>

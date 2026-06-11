@@ -1,9 +1,9 @@
 export default function PavelPage() {
   const screenshots = [
-    "/images/pavel/guitar.png",
-    "/images/pavel/close-up.png",
-    "/images/pavel/medium-close-up.png",
-    "/images/pavel/wide-shot.png",
+    "/images/pavel/guitar.jpg",
+    "/images/pavel/close-up.jpg",
+    "/images/pavel/medium-close-up.jpg",
+    "/images/pavel/wide-shot.jpg",
   ]
 
   return (
@@ -25,7 +25,7 @@ export default function PavelPage() {
       <section className="project-intro">
 
         <img
-          src="/images/pavel/hero-shot.png"
+          src="/images/pavel/hero-shot.jpg"
           alt="Pavel Fakhrtdinov"
           className="project-intro-image"
         />

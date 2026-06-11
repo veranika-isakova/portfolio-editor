@@ -1,9 +1,9 @@
 export default function MusiaPage() {
   const screenshots = [
-    "/images/musia/room.png",
-    "/images/musia/drums.png",
+    "/images/musia/room.jpg",
+    "/images/musia/drums.jpg",
     "/images/musia/face.jpg",
-    "/images/musia/golden.png",
+    "/images/musia/golden.jpg",
   ]
 
   return (
@@ -23,7 +23,7 @@ export default function MusiaPage() {
       <section className="project-intro">
 
         <img
-          src="/images/musia/hero-shot.png"
+          src="/images/musia/hero-shot.jpg"
           alt="Musia Totibadze"
           className="project-intro-image"
         />

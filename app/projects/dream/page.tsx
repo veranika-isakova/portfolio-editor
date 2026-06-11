@@ -23,7 +23,7 @@ export default function DreamPage() {
       <section className="project-intro">
 
         <img
-          src="/images/dream/hero-shot.png"
+          src="/images/dream/hero-shot.jpg"
           alt="Dream"
           className="project-intro-image"
         />
@@ -45,8 +45,8 @@ export default function DreamPage() {
       {/* FIRST ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/dream/dark.jpg" alt="" />
-        <img src="/images/dream/light.jpg" alt="" />
+        <img src="/images/dream/dark.jpg" alt="" loading="lazy" />
+        <img src="/images/dream/light.jpg" alt="" loading="lazy" />
       </div>
 
       {/* FULL WIDTH IMAGE */}
@@ -60,8 +60,8 @@ export default function DreamPage() {
       {/* SECOND ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/dream/morning.jpg" alt="" />
-        <img src="/images/dream/phone.jpg" alt="" />
+        <img src="/images/dream/morning.jpg" alt="" loading="lazy" />
+        <img src="/images/dream/phone.jpg" alt="" loading="lazy" />
       </div>
 
     </main>
