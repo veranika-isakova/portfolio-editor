@@ -15,6 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Veranika Isakova | Film Editor</title>
+
+        <meta
+          name="description"
+          content="Film Editor based in Rotterdam. Documentary, narrative and short film projects."
+        />
+
         <meta
           name="google-site-verification"
           content="Lk2aBGPCuGHRUwZoFNoCg5mCk22lGoTEy25nKLj2gxM"
