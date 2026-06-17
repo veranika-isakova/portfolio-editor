@@ -60,7 +60,7 @@ export default function DreamPage() {
       {/* SECOND ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/ny/alone.jpg" alt="" loading="lazy" />
+        <img src="/images/ny/face.jpg" alt="" loading="lazy" />
         <img src="/images/ny/ny.jpg" alt="" loading="lazy" />
       </div>
 

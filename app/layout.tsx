@@ -14,6 +14,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="Lk2aBGPCuGHRUwZoFNoCg5mCk22lGoTEy25nKLj2gxM"
+        />
+      </head>
       <body className="bg-white text-black">
 
         <header className="flex justify-between items-start px-14 py-10 mobile-header">
