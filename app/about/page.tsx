@@ -6,7 +6,8 @@ import {
   FaInstagram,
   FaVimeoV,
   FaTelegramPlane,
-  FaWhatsapp
+  FaWhatsapp,
+  FaYoutube
 } from "react-icons/fa"
 
 export default function AboutPage() {
@@ -109,6 +110,19 @@ export default function AboutPage() {
             >
               <FaVimeoV />
             </a>
+
+            <a
+              href="https://www.youtube.com/@veranikaisakova"
+              target="_blank"
+              className="
+                transition-all
+                duration-300
+                hover:text-[#4A4EFF]
+                hover:scale-110
+              "
+            >
+              <FaYoutube />
+            </a>           
 
             <a
               href="https://t.me/veranika_isakova"
