@@ -5,10 +5,10 @@ export default function Home() {
     <main className="home-grid">
 
       <ProjectCard
-        href="/projects/ny"
-        image="/images/ny/cover.jpg"
-        title="City drift"
-        subtitle="Cinematic portrait film"
+        href="/projects/lore"
+        image="/images/lore/cover.jpg"
+        title="LORE Sublimity"
+        subtitle="Spec Ad"
       />
 
       <ProjectCard
@@ -37,6 +37,13 @@ export default function Home() {
         image="/images/dream/cover.jpg"
         title="In a dream maybe"
         subtitle="Atmospheric film"
+      />
+
+      <ProjectCard
+        href="/projects/ny"
+        image="/images/ny/cover.jpg"
+        title="City drift"
+        subtitle="Cinematic portrait film"
       />
 
       <ProjectCard

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
+import Footer from "./components/footer"
 
 export default function RootLayout({
   children,
@@ -74,6 +75,7 @@ export default function RootLayout({
         </header>
 
         {children}
+        <Footer />
         
         <Analytics />
 
