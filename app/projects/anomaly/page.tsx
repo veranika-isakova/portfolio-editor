@@ -100,7 +100,7 @@ export default function AnomalyPage() {
 
         {/* HERO SHOT */}
         <img
-          src="/images/anomaly/man.png"
+          src="/images/anomaly/cover.png"
           alt="Anomaly hero shot"
           className="w-full h-auto block m-0 p-0"
           loading="lazy"
