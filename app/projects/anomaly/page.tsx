@@ -32,7 +32,7 @@ export default function AnomalyPage() {
             <p className="text-[13.5px] md:text-[14.5px] leading-relaxed text-gray-600 m-0">
               Trapped inside an isolated research facility, a group of numbered subjects tries 
               to survive the presence of a mysterious entity known as the Anomaly. 
-              As panic rises and lives are lost, one of them attempts a desperate escape — 
+              As panic rises and lives are lost, one of them attempts a desperate escape - 
               only to discover the cold truth behind the experiment.
             </p>
           </div>
