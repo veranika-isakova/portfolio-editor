@@ -115,7 +115,7 @@ export default function AnomalyPage() {
             loading="lazy"
           />
           <img
-            src="/images/anomaly/neon.png"
+            src="/images/anomaly/couple.png"
             alt="Still 4"
             className="w-full h-auto block m-0 p-0"
             loading="lazy"
