@@ -9,6 +9,7 @@ type Props = {
   image: string
   title: string
   subtitle: string
+  className?: string
 }
 
 export default function ProjectCard({
@@ -16,6 +17,7 @@ export default function ProjectCard({
   image,
   title,
   subtitle,
+  className = "",
 }: Props) {
 
   const pathname = usePathname()
@@ -64,10 +66,10 @@ export default function ProjectCard({
 
     return (
 
-      <div
-        className="project-card"
-        onClick={openCard}
-      >
+        <div
+          className={`project-card ${className}`}
+          onClick={openCard}
+        >
 
         {revealed ? (
 
@@ -95,8 +97,12 @@ export default function ProjectCard({
             src={image}
             alt={title}
             draggable={false}
+            style={
+              href === "/projects/lore"
+                ? { objectPosition: "90% center" }
+                : undefined
+            }
           />
-
         )}
 
       </div>
@@ -108,12 +114,17 @@ export default function ProjectCard({
 
     <Link
       href={href}
-      className="project-card"
+      className={`project-card ${className}`}
     >
 
       <img
         src={image}
         alt={title}
+        style={
+          href === "/projects/lore"
+            ? { objectPosition: "90% center" }
+            : undefined
+        }
       />
 
       <div className="overlay">
