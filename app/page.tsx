@@ -6,7 +6,7 @@ export default function Home() {
 
       <ProjectCard
         href="/projects/anomaly"
-        image="/images/anomaly/man.png"
+        image="/images/anomaly/man.jpg"
         title="Anomaly"
         subtitle="48 Hour Film Project"
       /> 
@@ -16,6 +16,20 @@ export default function Home() {
         image="/images/doc/cover.jpg"
         title="Ozharovsky"
         subtitle="Documentary film"
+      />
+
+      <ProjectCard
+        href="/projects/go"
+        image="/images/go/cover.jpg"
+        title="Letting Go"
+        subtitle="Short Film"
+      />
+
+      <ProjectCard
+        href="/projects/ny"
+        image="/images/ny/cover.jpg"
+        title="City drift"
+        subtitle="Cinematic portrait film"
       />
 
       <ProjectCard
@@ -37,13 +51,6 @@ export default function Home() {
         image="/images/lore/cover.jpg"
         title="LORE Sublimity"
         subtitle="Spec Ad"
-      />
-
-      <ProjectCard
-        href="/projects/ny"
-        image="/images/ny/cover.jpg"
-        title="City drift"
-        subtitle="Cinematic portrait film"
       />
 
       <ProjectCard
