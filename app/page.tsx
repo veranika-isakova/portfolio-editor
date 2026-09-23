@@ -19,6 +19,20 @@ export default function Home() {
       />
 
       <ProjectCard
+        href="/projects/go"
+        image="/images/go/cover.jpg"
+        title="Letting Go"
+        subtitle="Short Film"
+      />
+
+      <ProjectCard
+        href="/projects/ny"
+        image="/images/ny/cover.jpg"
+        title="City drift"
+        subtitle="Cinematic portrait film"
+      />
+
+      <ProjectCard
         href="/projects/pavel"
         image="/images/pavel/cover.jpg"
         title="Pavel Fakhrtdinov"
@@ -40,13 +54,6 @@ export default function Home() {
       />
 
       <ProjectCard
-        href="/projects/ny"
-        image="/images/ny/cover.jpg"
-        title="City drift"
-        subtitle="Cinematic portrait film"
-      />
-
-      <ProjectCard
         href="/projects/dream"
         image="/images/dream/cover.jpg"
         title="In a dream maybe"
@@ -59,13 +66,6 @@ export default function Home() {
         title="Lime"
         subtitle="Studio campaign"
       />
-
-      {/* <ProjectCard
-        href="/projects/go"
-        image="/images/go/cover.jpg"
-        title="Letting Go"
-        subtitle="Short Film"
-      /> */}
 
     </main>
   )
