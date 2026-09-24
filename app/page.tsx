@@ -1,11 +1,12 @@
-"use client"
-
-import { useSearchParams } from "next/navigation"
 import ProjectCard from "./components/ProjectCard"
 
-export default function Home() {
-  const searchParams = useSearchParams()
-  const category = searchParams.get("category")
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>
+}) {
+  const params = await searchParams
+  const category = params.category
 
   const projects = [
     {
