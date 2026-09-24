@@ -36,83 +36,45 @@ export default function GoPage() {
 
       </section>
 
-
       {/* KEY CREW & CAST */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 w-full mb-4 md:mb-5 px-5 md:px-8">
 
-      <section className="project-credits">
+        {/* KEY CREW */}
+        <div>
+          <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
+            Key Crew
+          </h3>
 
-        <div className="project-credits-grid">
-
-          {/* KEY CREW */}
-
-          <div>
-            <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-3">
-              Key Crew
-            </h3>
-
-            <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-
-              <div>
-                <span className="text-gray-500">Director / Producer:</span>{" "}
-                Carlos Montenegro
-              </div>
-
-              <div>
-                <span className="text-gray-500">Co-Director:</span>{" "}
-                Natisa Jones
-              </div>
-
-              <div>
-                <span className="text-gray-500">Director of Photography:</span>{" "}
-                Zbigniew Zielinski
-              </div>
-
-              <div>
-                <span className="text-gray-500">Editors:</span>{" "}
-                Veranika Isakova, Carlos Montenegro
-              </div>
-
-              <div>
-                <span className="text-gray-500">Colour Grader:</span>{" "}
-                Pieter de Pagie
-              </div>
-
-              <div>
-                <span className="text-gray-500">Composers:</span>{" "}
-                Morgan Whitney, Matthew Torres
-              </div>
-
-            </div>
+          <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
+            <div><span className="text-gray-500">Director / Producer:</span> Carlos Montenegro</div>
+            <div><span className="text-gray-500">Co-Director:</span> Natisa Jones</div>
+            <div><span className="text-gray-500">Director of Photography:</span> Zbigniew Zielinski</div>
+            <div><span className="text-gray-500">Editor:</span> Veranika Isakova</div>
+            <div><span className="text-gray-500">Editing Consultant:</span> Vedant Yevle</div>
+            <div><span className="text-gray-500">Colour Grader:</span> Pieter de Pagie</div>
+            <div><span className="text-gray-500">Sound Recordist / Composer:</span> Morgan Whitney</div>
+            <div><span className="text-gray-500">Composer:</span> Matthew Torres</div>
           </div>
-
-
-          {/* CAST */}
-
-          <div className="-translate-x-[8px]">
-
-            <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-3">
-              Cast
-            </h3>
-
-            <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-
-              <div>
-                <span className="text-gray-500">David:</span>{" "}
-                Carlos Montenegro
-              </div>
-
-              <div>
-                <span className="text-gray-500">Nick:</span>{" "}
-                Shreyas Bettadapura
-              </div>
-
-            </div>
-
-          </div>
-
         </div>
 
-      </section>
+        {/* CAST */}
+        <div className="md:relative md:-left-50">
+          <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
+            Cast
+          </h3>
+
+          <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
+            <div>
+              <span className="text-gray-500">David:</span> Carlos Montenegro
+            </div>
+
+            <div>
+              <span className="text-gray-500">Nick:</span> Shreyas Bettadapura
+            </div>
+          </div>
+        </div>
+
+      </div>
 
 
       {/* SCREENSHOTS */}
