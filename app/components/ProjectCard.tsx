@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 
 type Props = {
   href: string
+  id?: string
   image: string
   title: string
   subtitle: string
@@ -14,6 +15,7 @@ type Props = {
 
 export default function ProjectCard({
   href,
+  id,
   image,
   title,
   subtitle,
@@ -67,6 +69,7 @@ export default function ProjectCard({
     return (
 
         <div
+          id={id}
           className={`project-card ${className}`}
           onClick={openCard}
         >
@@ -113,6 +116,7 @@ export default function ProjectCard({
   return (
 
     <Link
+      id={id}
       href={href}
       className={`project-card ${className}`}
     >

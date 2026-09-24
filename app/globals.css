@@ -314,6 +314,50 @@ body {
   color: #6b7280;
 }
 
+/* MAIN NAVIGATION */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 18px;
+  padding-top: 10px;
+  min-width: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.home-link,
+.contact-link {
+  flex-shrink: 0;
+}
+
+.category-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-category {
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.nav-category:hover {
+  opacity: 0.7;
+}
+
 /* =========================
    ANOMALY BACKSTAGE
    ========================= */
@@ -549,6 +593,29 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  .main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 0;
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .category-nav {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    gap: 24px;
+  }
+
+  .home-link,
+  .contact-link {
+    flex-shrink: 0;
+  }
+
   .home-grid {
     display: flex;
     flex-direction: column;

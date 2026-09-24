@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useSearchParams } from "next/navigation"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 import Footer from "./components/footer"
@@ -12,6 +12,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const activeCategory = searchParams.get("category")
+
+  const categories = [
+    { name: "Fiction", value: "fiction" },
+    { name: "Documentary", value: "documentary" },
+    { name: "Music", value: "music" },
+    { name: "Branded", value: "branded" },
+    { name: "Visuals", value: "visuals" },
+  ]
 
   return (
     <html lang="en">
@@ -28,10 +39,12 @@ export default function RootLayout({
           content="Lk2aBGPCuGHRUwZoFNoCg5mCk22lGoTEy25nKLj2gxM"
         />
       </head>
-      <body className="bg-white text-black">
+
+      <body className="bg-white text-black min-h-screen flex flex-col">
 
         <header className="flex justify-between items-start px-14 py-10 mobile-header">
 
+          {/* NAME */}
           <div className="flex items-center gap-5 mobile-brand">
 
             <Link href="/" className="nav-link">
@@ -46,25 +59,50 @@ export default function RootLayout({
 
           </div>
 
-          <nav className="flex gap-8 text-lg mobile-nav pt-[10px]">
 
+          {/* NAVIGATION */}
+          <nav className="main-nav">
+
+            {/* HOME */}
             <Link
               href="/"
-              className={`nav-link ${
-                pathname === "/"
+              className={`nav-link home-link ${
+                !activeCategory && pathname === "/"
                   ? "text-black"
-                  : "text-gray-300 hover:text-black transition"
+                  : "text-gray-300"
               }`}
             >
-              Work
+              Home
             </Link>
 
+
+            {/* CATEGORIES */}
+            <div className="category-nav">
+
+              {categories.map((category) => (
+                <Link
+                  key={category.value}
+                  href={`/?category=${category.value}`}
+                  className={`nav-category ${
+                    activeCategory === category.value
+                      ? "text-black"
+                      : "text-gray-300"
+                  }`}
+                >
+                  {category.name}
+                </Link>
+              ))}
+
+            </div>
+
+
+            {/* CONTACT */}
             <Link
               href="/about"
-              className={`nav-link ${
+              className={`nav-link contact-link ${
                 pathname === "/about"
                   ? "text-black"
-                  : "text-gray-300 hover:text-black transition"
+                  : "text-gray-300"
               }`}
             >
               Contact
@@ -74,9 +112,12 @@ export default function RootLayout({
 
         </header>
 
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
+
         <Footer />
-        
+
         <Analytics />
 
       </body>
