@@ -33,23 +33,27 @@ export default function Navigation() {
       </Link>
 
       {/* CATEGORIES */}
-      <div className="category-nav">
+        <div className="category-nav-wrapper">
 
-        {categories.map((category) => (
-          <Link
-            key={category.value}
-            href={`/?category=${category.value}`}
-            className={`nav-category ${
-              activeCategory === category.value
-                ? "text-black"
-                : "text-gray-300"
-            }`}
-          >
-            {category.name}
-          </Link>
-        ))}
+        <div className="category-nav">
 
-      </div>
+            {categories.map((category) => (
+            <Link
+                key={category.value}
+                href={`/?category=${category.value}`}
+                className={`nav-category ${
+                activeCategory === category.value
+                    ? "text-black"
+                    : "text-gray-300"
+                }`}
+            >
+                {category.name}
+            </Link>
+            ))}
+
+        </div>
+
+        </div>
 
       {/* CONTACT */}
       <Link
