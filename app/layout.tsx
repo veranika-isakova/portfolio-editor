@@ -1,29 +1,17 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname, useSearchParams } from "next/navigation"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 import Footer from "./components/footer"
+import Navigation from "./components/Navigation"
+import { Suspense } from "react"
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  const activeCategory = searchParams.get("category")
-
-  const categories = [
-    { name: "Fiction", value: "fiction" },
-    { name: "Documentary", value: "documentary" },
-    { name: "Music", value: "music" },
-    { name: "Branded", value: "branded" },
-    { name: "Visuals", value: "visuals" },
-  ]
-
   return (
     <html lang="en">
       <head>
@@ -59,56 +47,10 @@ export default function RootLayout({
 
           </div>
 
-
           {/* NAVIGATION */}
-          <nav className="main-nav">
-
-            {/* HOME */}
-            <Link
-              href="/"
-              className={`nav-link home-link ${
-                !activeCategory && pathname === "/"
-                  ? "text-black"
-                  : "text-gray-300"
-              }`}
-            >
-              Home
-            </Link>
-
-
-            {/* CATEGORIES */}
-            <div className="category-nav">
-
-              {categories.map((category) => (
-                <Link
-                  key={category.value}
-                  href={`/?category=${category.value}`}
-                  className={`nav-category ${
-                    activeCategory === category.value
-                      ? "text-black"
-                      : "text-gray-300"
-                  }`}
-                >
-                  {category.name}
-                </Link>
-              ))}
-
-            </div>
-
-
-            {/* CONTACT */}
-            <Link
-              href="/about"
-              className={`nav-link contact-link ${
-                pathname === "/about"
-                  ? "text-black"
-                  : "text-gray-300"
-              }`}
-            >
-              Contact
-            </Link>
-
-          </nav>
+          <Suspense fallback={null}>
+            <Navigation />
+          </Suspense>
 
         </header>
 
