@@ -1,15 +1,17 @@
+import BackstageGallery from "../../components/BackstageGallery"
+
 export default function AnomalyPage() {
   const backstagePhotos = [
-    "/images/anomaly/backstage/1.jpg",
-    "/images/anomaly/backstage/2.jpg",
-    "/images/anomaly/backstage/3.jpg",
-    "/images/anomaly/backstage/4.jpg",
-    "/images/anomaly/backstage/5.jpg",
-    "/images/anomaly/backstage/6.jpg",
-    "/images/anomaly/backstage/7.jpg",
-    "/images/anomaly/backstage/8.jpg",
-    "/images/anomaly/backstage/9.jpg",
-    "/images/anomaly/backstage/10.jpg"
+    "/images/anomaly/backstage/3.jpeg",
+    "/images/anomaly/backstage/2.jpeg",
+    "/images/anomaly/backstage/4.jpeg",
+    "/images/anomaly/backstage/5.jpeg",
+    "/images/anomaly/backstage/6.jpeg",
+    "/images/anomaly/backstage/7.jpeg",
+    "/images/anomaly/backstage/8.jpeg",
+    "/images/anomaly/backstage/1.jpeg",
+    "/images/anomaly/backstage/9.jpeg",
+    "/images/anomaly/backstage/10.jpeg"
   ]
 
   return (
@@ -36,7 +38,7 @@ export default function AnomalyPage() {
 
         <div className="w-full max-w-[300px] sm:max-w-[340px] md:max-w-[440px] shrink-0 rounded overflow-hidden shadow-2xl bg-black leading-none mx-auto md:mx-0">
           <img
-            src="/images/anomaly/poster-nominations.jpg"
+            src="/images/anomaly/poster-nominations.jpeg"
             alt="Anomaly poster"
             className="w-full h-auto block transform scale-[1.01]"
           />
@@ -200,14 +202,14 @@ export default function AnomalyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 w-full m-0 p-0 leading-none">
 
           <img
-            src="/images/anomaly/death.jpg"
+            src="/images/anomaly/death.jpeg"
             alt="Still 1"
             className="w-full h-auto block m-0 p-0"
             loading="lazy"
           />
 
           <img
-            src="/images/anomaly/stairs.jpg"
+            src="/images/anomaly/stairs.jpeg"
             alt="Still 2"
             className="w-full h-auto block m-0 p-0"
             loading="lazy"
@@ -219,7 +221,7 @@ export default function AnomalyPage() {
         {/* HERO SHOT */}
 
         <img
-          src="/images/anomaly/cover.jpg"
+          src="/images/anomaly/cover.jpeg"
           alt="Anomaly hero shot"
           className="w-full h-auto block m-0 p-0"
           loading="lazy"
@@ -231,14 +233,14 @@ export default function AnomalyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 w-full m-0 p-0 leading-none">
 
           <img
-            src="/images/anomaly/couple.jpg"
+            src="/images/anomaly/couple.jpeg"
             alt="Still 3"
             className="w-full h-auto block m-0 p-0"
             loading="lazy"
           />
 
           <img
-            src="/images/anomaly/hand.jpg"
+            src="/images/anomaly/hand.jpeg"
             alt="Still 4"
             className="w-full h-auto block m-0 p-0"
             loading="lazy"
@@ -247,7 +249,6 @@ export default function AnomalyPage() {
         </div>
 
       </section>
-
 
       {/* BACKSTAGE */}
 
@@ -261,26 +262,8 @@ export default function AnomalyPage() {
 
         </div>
 
-
-        {/* HORIZONTAL PHOTO SCROLL */}
-
-        <div className="anomaly-gallery">
-
-          {backstagePhotos.map((photo, index) => (
-            <div
-              className="anomaly-gallery-item"
-              key={photo}
-            >
-
-              <img
-                src={photo}
-                alt={`Anomaly backstage ${index + 1}`}
-                loading="lazy"
-              />
-
-            </div>
-          ))}
-
+        <div className="anomaly-gallery-wrapper">
+          <BackstageGallery photos={backstagePhotos} />
         </div>
 
       </section>

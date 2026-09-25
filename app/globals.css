@@ -485,6 +485,207 @@ body {
   scrollbar-color: #777777 #E5E5E5;
 }
 
+/* =========================
+   ANOMALY BACKSTAGE LIGHTBOX
+   ========================= */
+
+.anomaly-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.9);
+
+  cursor: zoom-out;
+}
+
+.anomaly-lightbox-image {
+  display: block;
+
+  max-width: 90vw;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  cursor: default;
+}
+
+.anomaly-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+
+  z-index: 100000;
+
+  border: none;
+  padding: 0;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1;
+
+  cursor: pointer;
+
+  opacity: 0.8;
+
+  transition: opacity 0.2s ease;
+}
+
+.anomaly-lightbox-close:hover {
+  opacity: 1;
+}
+
+/* LIGHTBOX ARROWS */
+
+.anomaly-lightbox-arrow {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 100000;
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  padding: 0;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  opacity: 0.7;
+
+  transition: opacity 0.2s ease;
+}
+
+.anomaly-lightbox-arrow:hover {
+  opacity: 1;
+}
+
+.anomaly-lightbox-prev {
+  left: 28px;
+}
+
+.anomaly-lightbox-next {
+  right: 28px;
+}
+
+
+/* PHOTO COUNTER */
+
+.anomaly-lightbox-counter {
+  position: absolute;
+
+  bottom: 24px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: white;
+
+  font-size: 12px;
+  letter-spacing: 0.12em;
+
+  opacity: 0.7;
+}
+
+.anomaly-gallery-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.anomaly-gallery-wrapper::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 90px;
+  height: 100%;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.95)
+  );
+}
+
+.anomaly-gallery-item {
+  position: relative;
+  cursor: zoom-in;
+}
+
+.anomaly-gallery-zoom {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 46px;
+  height: 46px;
+
+  transform: translate(-50%, -50%) scale(0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #171717;
+
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.anomaly-gallery-item:hover .anomaly-gallery-zoom {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.anomaly-gallery-item:hover img {
+  transform: scale(1.025);
+}
+
 /* =========================================
    POSTER PROJECT LAYOUT (ANOMALY)
 ========================================= */
@@ -702,6 +903,10 @@ body {
   .anomaly-gallery-item {
     width: 78vw;
     height: 52vw;
+  }
+
+  .anomaly-gallery-wrapper::after {
+    width: 45px;
   }
 
   .project-card:hover img {

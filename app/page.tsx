@@ -12,7 +12,7 @@ export default async function Home({
     {
       category: "fiction",
       href: "/projects/anomaly",
-      image: "/images/anomaly/man.jpg",
+      image: "/images/anomaly/man.jpeg",
       title: "Anomaly",
       subtitle: "48 Hour Film Project",
     },
@@ -26,7 +26,7 @@ export default async function Home({
     {
       category: "fiction",
       href: "/projects/go",
-      image: "/images/go/cover.jpg",
+      image: "/images/go/cover.jpeg",
       title: "Letting Go",
       subtitle: "Short Film",
     },

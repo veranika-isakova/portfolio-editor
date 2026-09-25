@@ -1,9 +1,9 @@
 export default function GoPage() {
   const screenshots = [
-    "/images/go/bed.jpg",
-    "/images/go/device.jpg",
-    "/images/go/happiness.jpg",
-    "/images/go/lonely.jpg",
+    "/images/go/bed.jpeg",
+    "/images/go/device.jpeg",
+    "/images/go/happiness.jpeg",
+    "/images/go/lonely.jpeg",
   ]
 
   return (
@@ -14,7 +14,7 @@ export default function GoPage() {
       <section className="project-intro">
 
         <img
-          src="/images/go/hero-shot.jpg"
+          src="/images/go/hero-shot.jpeg"
           alt="go"
           className="project-intro-image"
         />
@@ -82,13 +82,13 @@ export default function GoPage() {
       <div className="screenshots-grid">
 
         <img
-          src="/images/go/device.jpg"
+          src="/images/go/device.jpeg"
           alt=""
           loading="lazy"
         />
 
         <img
-          src="/images/go/couple.jpg"
+          src="/images/go/couple.jpeg"
           alt=""
           loading="lazy"
         />
@@ -99,13 +99,13 @@ export default function GoPage() {
       <div className="screenshots-grid">
 
         <img
-          src="/images/go/happiness.jpg"
+          src="/images/go/happiness.jpeg"
           alt=""
           loading="lazy"
         />
 
         <img
-          src="/images/go/bed.jpg"
+          src="/images/go/bed.jpeg"
           alt=""
           loading="lazy"
         />
