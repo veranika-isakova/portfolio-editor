@@ -1,4 +1,26 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
 export default function GoPage() {
+  const [posterOpen, setPosterOpen] = useState(false)
+
+  useEffect(() => {
+    if (!posterOpen) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setPosterOpen(false)
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [posterOpen])
+
   return (
     <main className="w-full p-0 m-0 overflow-x-hidden box-border">
 
@@ -8,15 +30,18 @@ export default function GoPage() {
 
         {/* POSTER */}
 
-        <div className="w-full max-w-[300px] sm:max-w-[340px] md:max-w-[440px] shrink-0 rounded overflow-hidden shadow-2xl bg-black leading-none mx-auto md:mx-0">
-
+        <button
+          type="button"
+          className="w-full max-w-[300px] sm:max-w-[340px] md:max-w-[440px] shrink-0 rounded overflow-hidden shadow-2xl bg-black leading-none mx-auto md:mx-0 anomaly-poster"
+          onClick={() => setPosterOpen(true)}
+          aria-label="Open Letting Go poster"
+        >
           <img
             src="/images/go/poster.jpeg"
             alt="Letting Go poster"
             className="w-full h-auto block transform scale-[1.01]"
           />
-
-        </div>
+        </button>
 
 
         {/* DESCRIPTION & CREDITS */}
@@ -135,6 +160,33 @@ export default function GoPage() {
 
       </section>
 
+
+      {/* POSTER LIGHTBOX */}
+
+      {posterOpen && (
+        <div
+          className="anomaly-poster-lightbox"
+          onClick={() => setPosterOpen(false)}
+        >
+          <button
+            type="button"
+            className="anomaly-poster-close"
+            onClick={() => setPosterOpen(false)}
+            aria-label="Close poster"
+          >
+            ×
+          </button>
+
+          <img
+            src="/images/go/poster.jpeg"
+            alt="Letting Go poster"
+            className="anomaly-poster-lightbox-image"
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      )}
+
+
       {/* SCREENSHOTS */}
 
       <div className="screenshots-grid">
@@ -153,15 +205,19 @@ export default function GoPage() {
 
       </div>
 
+
       {/* FULL WIDTH IMAGE */}
 
       <section className="w-full m-0 p-0">
+
         <img
           src="/images/go/hero-shot.jpeg"
           alt=""
           className="w-full h-auto block m-0 p-0"
         />
+
       </section>
+
 
       <div className="screenshots-grid">
 

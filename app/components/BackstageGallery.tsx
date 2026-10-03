@@ -75,12 +75,6 @@ export default function BackstageGallery({ photos }: Props) {
               loading="lazy"
             />
 
-            {/* ZOOM INDICATOR */}
-
-            <span className="anomaly-gallery-zoom">
-              +
-            </span>
-
           </button>
         ))}
 
