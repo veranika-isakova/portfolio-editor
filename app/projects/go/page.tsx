@@ -1,81 +1,139 @@
 export default function GoPage() {
-  const screenshots = [
-    "/images/go/bed.jpeg",
-    "/images/go/device.jpeg",
-    "/images/go/happiness.jpeg",
-    "/images/go/lonely.jpeg",
-  ]
-
   return (
-    <main className="project-page">
+    <main className="w-full p-0 m-0 overflow-x-hidden box-border">
 
-      {/* HERO / INTRO */}
+      {/* MAIN HERO BLOCK */}
 
-      <section className="project-intro">
+      <section className="w-full max-w-[1140px] mx-auto my-4 md:my-12 px-5 md:px-8 box-border flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
 
-        <img
-          src="/images/go/hero-shot.jpeg"
-          alt="go"
-          className="project-intro-image"
-        />
+        {/* POSTER */}
 
-        <div className="project-intro-text">
+        <div className="w-full max-w-[300px] sm:max-w-[340px] md:max-w-[440px] shrink-0 rounded overflow-hidden shadow-2xl bg-black leading-none mx-auto md:mx-0">
 
-          <h2>Letting Go</h2>
+          <img
+            src="/images/go/poster.jpeg"
+            alt="Letting Go poster"
+            className="w-full h-auto block transform scale-[1.01]"
+          />
 
-          <p>
-            Trapped in a cycle of grief, David uses a futuristic device to
-            relive memories of his deceased boyfriend, but he must choose
-            between a perfect digital dream and the painful reality of
-            letting go.
-          </p>
+        </div>
 
-          <span className="coming-soon">FESTIVAL PREMIERE SOON</span>
+
+        {/* DESCRIPTION & CREDITS */}
+
+        <div className="w-full max-w-[540px] flex flex-col items-start text-left">
+
+          <h1 className="text-[#4A4EFF] text-2xl md:text-3xl font-bold tracking-widest uppercase mb-1.5 md:mb-2">
+            Letting Go
+          </h1>
+
+
+          {/* SYNOPSIS */}
+
+          <div className="mb-4 md:mb-5">
+
+            <p className="text-[13.5px] md:text-[14.5px] leading-relaxed text-gray-600 m-0">
+              Trapped in a cycle of grief, David uses a futuristic device
+              to relive memories of his deceased boyfriend, but he must
+              choose between a perfect digital dream and the painful
+              reality of letting go.
+            </p>
+
+          </div>
+
+
+          {/* KEY CREW & CAST GRID */}
+
+          <div className="grid grid-cols-2 gap-4 md:gap-6 w-full mb-4 md:mb-5">
+
+            {/* KEY CREW */}
+
+            <div>
+
+              <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
+                Key Crew
+              </h3>
+
+              <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
+
+                <div>
+                  <span className="text-gray-500">Director / Producer:</span>{" "}
+                  Carlos Montenegro
+                </div>
+
+                <div>
+                  <span className="text-gray-500">Co-Director:</span>{" "}
+                  Natisa Jones
+                </div>
+
+                <div>
+                  <span className="text-gray-500">Director of Photography:</span>{" "}
+                  Zbigniew Zielinski
+                </div>
+
+                <div>
+                  <span className="text-gray-500">Editors:</span>{" "}
+                  Veranika Isakova, Carlos Montenegro
+                </div>
+
+                <div>
+                  <span className="text-gray-500">Colour Grader:</span>{" "}
+                  Pieter de Pagie
+                </div>
+
+                <div>
+                  <span className="text-gray-500">Sound Recordist / Composer:</span>{" "}
+                  Morgan Whitney
+                </div>
+
+                <div>
+                  <span className="text-gray-500">Composer:</span>{" "}
+                  Matthew Torres
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* CAST */}
+
+            <div>
+
+              <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
+                Cast
+              </h3>
+
+              <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
+
+                <div>
+                  <span className="text-gray-500">David:</span>{" "}
+                  Carlos Montenegro
+                </div>
+
+                <div>
+                  <span className="text-gray-500">Nick:</span>{" "}
+                  Shreyas Bettadapura
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* META INFO */}
+
+          <div className="text-[12.5px] md:text-[13.5px] text-gray-500 mb-5 md:mb-6 leading-relaxed">
+
+            <span className="coming-soon">Festival premiere soon</span>
+
+          </div>
 
         </div>
 
       </section>
-
-      {/* KEY CREW & CAST */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 w-full mb-4 md:mb-5 px-5 md:px-8">
-
-        {/* KEY CREW */}
-        <div>
-          <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
-            Key Crew
-          </h3>
-
-          <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-            <div><span className="text-gray-500">Director / Producer:</span> Carlos Montenegro</div>
-            <div><span className="text-gray-500">Co-Director:</span> Natisa Jones</div>
-            <div><span className="text-gray-500">Director of Photography:</span> Zbigniew Zielinski</div>
-            <div><span className="text-gray-500">Editor:</span> Veranika Isakova</div>
-            <div><span className="text-gray-500">Editing Consultant:</span> Vedant Yevle</div>
-            <div><span className="text-gray-500">Colour Grader:</span> Pieter de Pagie</div>
-            <div><span className="text-gray-500">Sound Recordist / Composer:</span> Morgan Whitney</div>
-            <div><span className="text-gray-500">Composer:</span> Matthew Torres</div>
-          </div>
-        </div>
-
-        {/* CAST */}
-        <div className="md:relative md:-left-50">
-          <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
-            Cast
-          </h3>
-
-          <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-            <div>
-              <span className="text-gray-500">David:</span> Carlos Montenegro
-            </div>
-
-            <div>
-              <span className="text-gray-500">Nick:</span> Shreyas Bettadapura
-            </div>
-          </div>
-        </div>
-
-      </div>
-
 
       {/* SCREENSHOTS */}
 
@@ -95,6 +153,15 @@ export default function GoPage() {
 
       </div>
 
+      {/* FULL WIDTH IMAGE */}
+
+      <section className="w-full m-0 p-0">
+        <img
+          src="/images/go/hero-shot.jpeg"
+          alt=""
+          className="w-full h-auto block m-0 p-0"
+        />
+      </section>
 
       <div className="screenshots-grid">
 

@@ -692,11 +692,11 @@ body {
 
 .project-intro.poster-layout {
   display: grid;
-  grid-template-columns: 460px minmax(320px, 540px);
+  grid-template-columns: 460px minmax(420px, 620px);
   gap: 70px;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 60px auto 80px;
   padding: 0 32px;
 }
@@ -721,21 +721,17 @@ body {
   max-width: 100%;
   text-align: left;
   align-items: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
 }
 
 .project-intro-text.text-left h2 {
   font-size: 32px;
-  margin-bottom: 8px;
+  margin: 0 0 18px 0;
   color: #4A4EFF;
   letter-spacing: 0.12em;
-}
-
-.poster-tagline {
-  font-size: 16px !important;
-  font-style: italic;
-  color: #171717 !important;
-  margin: 0 0 24px 0 !important;
-  font-weight: 500;
 }
 
 .project-block {
@@ -764,7 +760,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   width: 100%;
-  margin: 16px 0 24px;
+  margin: 0 0 18px;
 }
 
 .credits-col p {
@@ -780,7 +776,7 @@ body {
 }
 
 .project-meta-info {
-  margin-bottom: 24px;
+  margin: 0;
 }
 
 .project-meta-info p {

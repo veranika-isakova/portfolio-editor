@@ -62,10 +62,6 @@ export default function AnomalyPage() {
 
           <div className="mb-4 md:mb-5">
 
-            <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
-              Synopsis
-            </h3>
-
             <p className="text-[13.5px] md:text-[14.5px] leading-relaxed text-gray-600 m-0">
               Trapped inside an isolated research facility, a group of numbered subjects tries 
               to survive the presence of a mysterious entity known as the Anomaly. 
