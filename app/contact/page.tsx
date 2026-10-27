@@ -149,7 +149,7 @@ export default function ContactPage() {
         onClick={() => setIsOpen(true)}
         className="mt-7 ml-0 bg-[#4A4EFF] text-white px-8 py-3 text-sm tracking-[0.2em] hover:opacity-90 transition cursor-pointer"
       >
-        SAY HELLO
+        say hello
       </button>
 
   </div>

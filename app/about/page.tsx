@@ -20,18 +20,22 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-base md:text-lg leading-relaxed text-[#676F80]">
-            is a film & video editor with a background in software
-            development and experience across narrative and
-            documentary films, commercial projects, live
-            performance videos and short-form content. focused
-            on storytelling, pacing and emotional impact, with
-            an interest in creating visually engaging and
-            rhythm-driven work.
+            Film & Video Editor working across fiction, documentary, commercial projects and short-form content. 
+            Interested in visual storytelling, rhythm and the relationship between image and sound. 
+            With a background in software development, I combine a technical perspective with a creative approach to editing.    
           </p>
 
         <p className="text-base md:text-lg leading-relaxed text-[#676F80]">
-            based in rotterdam, available for collaborations.
+            Based in Rotterdam, available for collaborations worldwide.
           </p>
+        <a
+        href="/images/Veranika_Isakova_Film_Editor_CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-7 bg-[#4A4EFF] text-white px-8 py-3 text-sm tracking-[0.2em] hover:opacity-90 transition"
+        >
+        view my cv (pdf)
+        </a>
         </div>
 
       </section>
