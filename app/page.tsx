@@ -62,14 +62,14 @@ export default async function Home({
       category: "visuals",
       href: "/projects/ny",
       image: "/images/ny/cover.jpg",
-      title: "City drift",
+      title: "City Drift",
       subtitle: "Cinematic portrait film",
     },
     {
       category: "visuals",
       href: "/projects/dream",
       image: "/images/dream/cover.jpg",
-      title: "In a dream maybe",
+      title: "In a Dream Maybe",
       subtitle: "Atmospheric film",
     },
     {
