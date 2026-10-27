@@ -26,8 +26,7 @@ export default function AboutPage() {
             performance videos and short-form content. focused
             on storytelling, pacing and emotional impact, with
             an interest in creating visually engaging and
-            rhythm-driven work. 
-            based in rotterdam, available for collaborations.
+            rhythm-driven work.
           </p>
 
         <p className="text-base md:text-lg leading-relaxed text-[#676F80]">
