@@ -26,7 +26,7 @@ export default async function Home({
     {
       category: "fiction",
       href: "/projects/tartarus",
-      image: "/images/tartarus/cover.jpg",
+      image: "/images/tartarus/cover.jpeg",
       title: "Mists of Tartarus",
       subtitle: "Short Film",
     },

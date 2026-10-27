@@ -1,9 +1,9 @@
 export default function DreamPage() {
   const screenshots = [
-    "/images/tartarus/club.jpg",
-    "/images/tartarus/coin.jpg",
-    "/images/tartarus/hero.jpg",
-    "/images/tartarus/neon.jpg",
+    "/images/tartarus/club.jpeg",
+    "/images/tartarus/coin.jpeg",
+    "/images/tartarus/hero.jpeg",
+    "/images/tartarus/neon.jpeg",
   ]
 
   return (
@@ -12,7 +12,7 @@ export default function DreamPage() {
       <section className="project-intro">
 
         <img
-          src="/images/tartarus/hero.jpg"
+          src="/images/tartarus/hero.jpeg"
           alt="tartarus"
           className="project-intro-image"
         />
@@ -38,15 +38,15 @@ export default function DreamPage() {
       {/* FIRST ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/tartarus/club.jpg" alt="" loading="lazy"/>
-        <img src="/images/tartarus/coin.jpg" alt="" loading="lazy"/>
+        <img src="/images/tartarus/club.jpeg" alt="" loading="lazy"/>
+        <img src="/images/tartarus/coin.jpeg" alt="" loading="lazy"/>
       </div>
 
       {/* SECOND ROW */}
 
       <div className="screenshots-grid">
-        <img src="/images/tartarus/door.jpg" alt="" loading="lazy" />
-        <img src="/images/tartarus/neon.jpg" alt="" loading="lazy" />
+        <img src="/images/tartarus/door.jpeg" alt="" loading="lazy" />
+        <img src="/images/tartarus/neon.jpeg" alt="" loading="lazy" />
       </div>
 
     </main>
