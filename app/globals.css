@@ -357,8 +357,8 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
-  padding-inline: 40px;
-  scroll-padding-inline: 120px;
+  padding-inline: 70px;
+  scroll-padding-inline: 20px;
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-padding-inline: 0;
