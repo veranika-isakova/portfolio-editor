@@ -25,17 +25,17 @@ export default async function Home({
     },
     {
       category: "fiction",
+      href: "/projects/tartarus",
+      image: "/images/tartarus/cover.jpg",
+      title: "Mists of Tartarus",
+      subtitle: "Short Film",
+    },
+    {
+      category: "fiction",
       href: "/projects/go",
       image: "/images/go/cover.jpeg",
       title: "Letting Go",
       subtitle: "Short Film",
-    },
-    {
-      category: "visuals",
-      href: "/projects/ny",
-      image: "/images/ny/cover.jpg",
-      title: "City drift",
-      subtitle: "Cinematic portrait film",
     },
     {
       category: "music",
@@ -57,6 +57,13 @@ export default async function Home({
       image: "/images/lore/cover.jpg",
       title: "LORE Sublimity",
       subtitle: "Spec Ad",
+    },
+   {
+      category: "visuals",
+      href: "/projects/ny",
+      image: "/images/ny/cover.jpg",
+      title: "City drift",
+      subtitle: "Cinematic portrait film",
     },
     {
       category: "visuals",

@@ -1,308 +1,41 @@
-"use client"
-
-import { useState } from "react"
-
-import {
-  FaInstagram,
-  FaVimeoV,
-  FaTelegramPlane,
-  FaWhatsapp,
-  FaYoutube
-} from "react-icons/fa"
 
 export default function AboutPage() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSent, setIsSent] = useState(false)
-
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault()
-
-    const submitter = (e.nativeEvent as SubmitEvent)
-      .submitter as HTMLElement | null
-
-    if (!submitter) {
-      return
-    }
-
-    setIsSubmitting(true)
-
-    const formData = new FormData(e.currentTarget)
-
-    const email = formData.get("email")?.toString().trim()
-    const message = formData.get("message")?.toString().trim()
-
-    if (!email || !message) {
-      setIsSubmitting(false)
-      return
-    }
-
-    const response = await fetch(
-      "https://formspree.io/f/xjgzyblw",
-      {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      }
-    )
-
-    setIsSubmitting(false)
-
-    if (response.ok) {
-      setIsSent(true)
-      e.currentTarget.reset()
-
-      setTimeout(() => {
-        setIsOpen(false)
-        setIsSent(false)
-      }, 2000)
-    }
-    else {
-      alert("Something went wrong. Please try again.")
-    }
-  }
-
   return (
-    <main className="min-h-screen bg-white text-black px-10 pt-6 pb-24">
+    <main className="min-h-screen bg-white text-black px-6 md:px-14 py-10 md:py-16">
+      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[420px_520px] gap-12 md:gap-28 items-start min-h-[75vh] px-4 md:px-0">
-
-        {/* LEFT SIDE */}
-
-        <div className="flex flex-col items-center">
-
+        {/* PHOTO */}
+        <div className="w-full max-w-[950px] mx-auto md:mx-0">
           <img
-            src="/images/profile.jpg"
+            src="/images/main-photo.jpg"
             alt="Veranika Isakova"
-            className="w-full max-w-[470px] object-cover"
+            className="w-full h-auto block object-cover"
           />
-
-          {/* SOCIALS */}
-
-          <div className="mt-5 flex gap-8 text-3xl text-black">
-
-            <a
-              href="https://instagram.com/veron.isakova/"
-              target="_blank"
-              className="
-                transition-all
-                duration-300
-                hover:text-[#4A4EFF]
-                hover:scale-110
-              "
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="https://vimeo.com/user223178973"
-              target="_blank"
-              className="
-                transition-all
-                duration-300
-                hover:text-[#4A4EFF]
-                hover:scale-110
-              "
-            >
-              <FaVimeoV />
-            </a>
-
-            <a
-              href="https://www.youtube.com/@veranikaisakova"
-              target="_blank"
-              className="
-                transition-all
-                duration-300
-                hover:text-[#4A4EFF]
-                hover:scale-110
-              "
-            >
-              <FaYoutube />
-            </a>           
-
-            <a
-              href="https://t.me/veranika_isakova"
-              target="_blank"
-              className="
-                transition-all
-                duration-300
-                hover:text-[#4A4EFF]
-                hover:scale-110
-              "
-            >
-              <FaTelegramPlane />
-            </a>
-
-            <a
-              href="https://wa.me/+31614517801"
-              target="_blank"
-                            className="
-                transition-all
-                duration-300
-                hover:text-[#4A4EFF]
-                hover:scale-110
-              "
-            >
-              <FaWhatsapp />
-            </a>
-
-          </div>
-
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* INTRODUCTION */}
+        <div className="flex flex-col items-start">
+          <h1 className="text-3xl md:text-5xl tracking-tight font-medium mb-6">
+            Veranika Isakova
+          </h1>
 
-        <div className="ml-0 md:ml-10">
-
-          <div className="mt-4 space-y-10 text-[#676f80]">
-
-            {/* MAIN TEXT */}
-
-          <p className="max-w-[760px] text-[20px] leading-[1.45] text-[#676f80] text-center md:text-left">
-            Veranika is a film & video editor based in Rotterdam, creating cinematic 
-            and emotionally driven work across a variety of creative projects, 
-            from commercial and branded content to documentary and narrative film.
-            Focused on atmosphere, storytelling and visual rhythm.
+          <p className="text-base md:text-lg leading-relaxed text-[#676F80]">
+            is a film & video editor with a background in software
+            development and experience across narrative and
+            documentary films, commercial projects, live
+            performance videos and short-form content. focused
+            on storytelling, pacing and emotional impact, with
+            an interest in creating visually engaging and
+            rhythm-driven work. 
+            based in rotterdam, available for collaborations.
           </p>
 
-          {/* CONTACT TEXT */}
-
-          <p className="text-[20px] leading-[1.45] text-[#676f80] text-center md:text-left">
-            Feel free to get in touch if you'd like to collaborate.
+        <p className="text-base md:text-lg leading-relaxed text-[#676F80]">
+            based in rotterdam, available for collaborations.
           </p>
-
-            {/* BUTTON */}
-
-            <div className="flex justify-center pt-2">
-
-            <button
-              onClick={() => setIsOpen(true)}
-              className="
-                bg-[#4A4EFF]
-                text-white
-                px-14
-                py-4
-                tracking-[0.28em]
-                hover:opacity-90
-                transition
-                cursor-pointer
-              "
-            >
-              CONTACT
-            </button>
-
-            </div>
-
-          </div>
-
         </div>
 
-      </div>
-
-      {/* CONTACT MODAL */}
-
-      {isOpen && (
-        <div className="fixed inset-0 bg-black/20 flex items-center justify-center z-50 px-6">
-
-          <div className="bg-white w-full max-w-3xl p-10 relative">
-
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 text-3xl hover:opacity-60 transition"
-            >
-              ×
-            </button>
-
-            <h2 className="text-3xl mb-8">
-              Hello! Let&apos;s work together
-            </h2>
-
-            <form
-              onSubmit={handleSubmit}
-              autoComplete="off"
-              className="space-y-7"
-            >
-
-              <div className="grid grid-cols-2 gap-4">
-
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  className="border border-gray-300 p-3 outline-none"
-                />
-
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  className="border border-gray-300 p-3 outline-none"
-                />
-
-              </div>
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                autoComplete="off"
-                autoCorrect="off"
-                autoCapitalize="none"
-                spellCheck={false}
-                required
-                className="w-full border border-gray-300 p-3 outline-none"
-              />
-
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                autoComplete="off"
-                className="w-full border border-gray-300 p-3 outline-none"
-              />
-
-              <textarea
-                name="message"
-                placeholder="Project Description"
-                rows={4}
-                required
-                className="w-full border border-gray-300 p-3 outline-none resize-none"
-              />
-
-              {isSent && (
-                <p className="text-green-600">
-                  Thank you! Your message has been sent.
-                </p>
-              )}
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="
-                  bg-[#4A4EFF]
-                  text-white
-                  px-14
-                  py-4
-                  tracking-[0.28em]
-                  hover:opacity-90
-                  transition
-                  cursor-pointer
-                "
-              >
-                SEND
-              </button>
-
-            </form>
-
-          </div>
-
-        </div>
-      )}
-
+      </section>
     </main>
   )
 }

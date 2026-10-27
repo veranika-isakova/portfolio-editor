@@ -319,7 +319,7 @@ body {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   font-size: 18px;
   padding-top: 10px;
   min-width: 0;
@@ -335,45 +335,54 @@ body {
   flex-shrink: 0;
 }
 
+.category-nav-wrapper {
+  position: relative;
+  width: 440px;
+  flex: 0 1 440px;
+  min-width: 0;
+  overflow: hidden;
+  margin-left: 0;
+  padding: 0;
+}
+
 .category-nav {
   display: flex;
   align-items: center;
   gap: 28px;
+  width: 100%;
   min-width: 0;
   overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
   scrollbar-width: none;
   -ms-overflow-style: none;
-}
-
-.category-nav::-webkit-scrollbar {
-  display: none;
+  scroll-behavior: smooth;
+  padding-inline: 120px;
+  scroll-padding-inline: 120px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-inline: 0;
 }
 
 .nav-category {
-  flex-shrink: 0;
-  transition: opacity 0.2s ease;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  transition: color 0.2s ease;
 }
 
-.nav-category:hover {
-  opacity: 0.7;
-}
-
-.category-nav-wrapper {
-  min-width: 0;
-}
-
-.category-nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  min-width: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.category-nav::-webkit-scrollbar {
-  display: none;
+.category-nav-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    #fff 95%
+  );
 }
 
 /* =========================
@@ -863,21 +872,6 @@ body {
     overflow: hidden;
   }
 
-  .category-nav-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1)
-    );
-  }
-
   .category-nav {
     width: 100%;
     gap: 24px;
@@ -1103,4 +1097,19 @@ body {
     font-weight: 500;
     text-transform: uppercase;
   }
+}
+
+/* FILMFREEWAY LINK */
+
+.project-website {
+  display: inline-block;
+  margin-top: 18px;
+  color: #6b7280;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s ease;
+}
+
+.project-website:hover {
+  color: #4A4EFF;
 }

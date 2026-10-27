@@ -33,7 +33,7 @@ export default function RootLayout({
         <header className="flex justify-between items-start px-14 py-10 mobile-header">
 
           {/* NAME */}
-          <div className="flex items-center gap-5 mobile-brand">
+          <div className="flex items-center gap-5 shrink-0 mobile-brand">
 
             <Link href="/" className="nav-link">
               <h1 className="text-3xl tracking-tight leading-none hover:opacity-70 transition">

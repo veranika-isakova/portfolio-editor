@@ -147,13 +147,20 @@ export default function GoPage() {
 
           </div>
 
-
           {/* META INFO */}
 
           <div className="text-[12.5px] md:text-[13.5px] text-gray-500 mb-5 md:mb-6 leading-relaxed">
-
-            <span className="coming-soon">Festival premiere soon</span>
-
+            <span className="coming-soon">
+              Festival premiere soon
+            </span>
+              <a
+                href="https://filmfreeway.com/Lettinggofilm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-website"
+              >
+              View on FilmFreeway
+            </a>
           </div>
 
         </div>
