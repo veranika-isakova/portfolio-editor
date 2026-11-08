@@ -1,19 +1,39 @@
 
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { createPortal } from "react-dom"
 import {
   FaInstagram,
   FaTelegramPlane,
   FaWhatsapp,
   FaVimeoV,
   FaYoutube,
+  FaImdb,
 } from "react-icons/fa"
 
 export default function ContactPage() {
   const [isOpen, setIsOpen] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSent, setIsSent] = useState(false)
+
+  // While the form is open: lock page scroll and close on Esc
+  useEffect(() => {
+    if (!isOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false)
+    }
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isOpen])
 
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>
@@ -109,16 +129,6 @@ export default function ContactPage() {
       <span>Instagram</span>
     </a>
 
-    <a
-      href="https://wa.me/31614517801"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-3 text-lg md:text-xl text-black no-underline hover:text-[#4A4EFF] transition-colors duration-200"
-    >
-      <FaWhatsapp className="text-2xl shrink-0" />
-      <span>WhatsApp</span>
-    </a>
-
       <a
       href="https://vimeo.com/user223178973"
       target="_blank"
@@ -140,6 +150,17 @@ export default function ContactPage() {
       <FaYoutube className="text-2xl shrink-0" />
       <span>YouTube</span>
     </a>
+
+    <a
+      href="https://www.imdb.com/name/nm19072226/?ref_=ttfc_fcr_4_1"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="IMDb"
+      className="flex items-center gap-3 text-lg md:text-xl text-black no-underline hover:text-[#4A4EFF] transition-colors duration-200"
+    >
+      <FaImdb className="text-2xl shrink-0" />
+      <span>IMDb</span>
+    </a>
   </div>
 
     {/* SAY HELLO */}
@@ -158,13 +179,16 @@ export default function ContactPage() {
 
       {/* CONTACT MODAL */}
 
-      {isOpen && (
+      {/* Rendered into <body> so the dark layer always covers the whole screen */}
+      {isOpen && createPortal(
         <div
-          className="fixed inset-0 bg-black/20 flex items-center justify-center z-50 px-4 py-6"
+          className="fixed inset-0 z-[1000] bg-black/40 flex items-center justify-center px-4 py-6"
           onClick={() => setIsOpen(false)}
+          role="dialog"
+          aria-modal="true"
         >
           <div
-            className="bg-white w-full max-w-3xl p-6 md:p-10 relative max-h-[90vh] overflow-y-auto"
+            className="bg-white w-full max-w-3xl p-6 md:p-10 relative max-h-full overflow-y-auto overscroll-contain"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -176,9 +200,14 @@ export default function ContactPage() {
               ×
             </button>
 
-            <h2 className="text-2xl md:text-3xl mb-8 pr-8">
+            <h2 className="text-2xl md:text-3xl mb-3 pr-8">
               Let&apos;s work together
             </h2>
+
+            <p className="text-[15px] md:text-[17px] leading-relaxed text-gray-600 mb-8">
+              Tell me about your project or write directly to{" "}
+              <span className="text-[#4A4EFF] break-all">veranika.isakova89@gmail.com</span>
+            </p>
 
             <form
               onSubmit={handleSubmit}
@@ -244,7 +273,8 @@ export default function ContactPage() {
               </button>
             </form>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </main>
   )

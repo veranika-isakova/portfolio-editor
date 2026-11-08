@@ -6,6 +6,13 @@ export default function DreamPage() {
     "/images/ny/ring.jpg",
   ]
 
+  const credits: { role: string; name: string; highlight?: boolean }[] = [
+    { role: "Cinematography", name: "Marina Basistaya" },
+    { role: "Edit, Colour & Sound Design", name: "Veranika Isakova" },
+    { role: "Model", name: "Anastasiia Larkicheva" },
+    { role: "Made for", name: "rec.stuudio" },
+  ]
+
   return (
     <main className="project-page">
 
@@ -20,21 +27,36 @@ export default function DreamPage() {
         />
       </div>
 
+      {/* INTRO */}
+
       <section className="project-intro">
 
         <img
           src="/images/ny/hero.jpg"
-          alt="NY"
+          alt="City Drift"
           className="project-intro-image"
         />
 
         <div className="project-intro-text">
 
-          <h2>City drift</h2>
+          <h2>City Drift</h2>
 
           <p>
-          Cinematic portrait film exploring moments of stillness within the rhythm of New York City.
+            Cinematic portrait film exploring moments of stillness within the rhythm of New York City.
           </p>
+
+          <div className="mt-5 text-[14px] md:text-[15px] leading-[1.9] text-[#171717]">
+            {credits.map((credit) => (
+              <div key={credit.role}>
+                <span className="text-gray-500">{credit.role}:</span>{" "}
+                {credit.highlight ? (
+                  <span className="text-[#4A4EFF]">{credit.name}</span>
+                ) : (
+                  credit.name
+                )}
+              </div>
+            ))}
+          </div>
 
         </div>
 

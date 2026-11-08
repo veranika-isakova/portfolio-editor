@@ -19,6 +19,34 @@ export default function AnomalyPage() {
     "/images/anomaly/backstage/10.jpeg"
   ]
 
+  const crew = [
+    { role: "Director", name: "Masha Shaposhnikova" },
+    { role: "Producer & Editing", name: "Veranika Isakova" },
+    { role: "DOP & Editing", name: "Max Hertz Lomakin" },
+    { role: "Sound", name: "Hassibullah Kushkaki" },
+    { role: "Music", name: "Berke Baha Dikmen" },
+    { role: "Art Department", name: "Veranika Isakova, Zofia Sanjuan - Janiec, Dimitris Matthaiou, Orlando Andersson" },
+  ]
+
+  const cast = [
+    { role: "Sara Smit", name: "Ines Angelova" },
+    { role: "Rob", name: "Robert Boerleider" },
+    { role: "Leo", name: "Lu Wang" },
+    { role: "Bodi", name: "Grace Kimasi" },
+    { role: "Billy", name: "Bill Stevenson" },
+  ]
+
+  const labelClass =
+    "text-[10.5px] md:text-[11px] tracking-[0.3em] uppercase text-gray-500 mb-1"
+  const listClass =
+    "text-[13px] md:text-[14px] leading-[1.6] text-[#171717]"
+
+  const meta = [
+    { role: "Team", name: "MM Film" },
+    { role: "Competition", name: "The 48 Hour Film Project Rotterdam 2026" },
+    { role: "Recognition", name: "Best Art Direction & Best Sound Design nominations" },
+  ]
+
   useEffect(() => {
     if (!posterOpen) return
 
@@ -71,111 +99,63 @@ export default function AnomalyPage() {
 
         {/* DESCRIPTION & CREDITS */}
 
-        <div className="w-full max-w-[540px] flex flex-col items-start text-left">
+        <div className="w-full max-w-[540px] flex flex-col items-center text-center">
 
-          <h1 className="text-[#4A4EFF] text-2xl md:text-3xl font-bold tracking-widest uppercase mb-1.5 md:mb-2">
+          <h1 className="text-[#4A4EFF] text-[18px] md:text-[22px] font-semibold tracking-[0.12em] uppercase mb-3 md:mb-4">
             Anomaly
           </h1>
 
-          <p className="text-[15px] md:text-[17px] italic text-[#171717] font-medium mb-4 md:mb-5">
-            "The Anomaly sees through every mask."
-          </p>
-
           {/* SYNOPSIS */}
 
-          <div className="mb-4 md:mb-5">
-            <p className="text-[13.5px] md:text-[14.5px] leading-relaxed text-gray-600 m-0">
-              Trapped inside an isolated research facility, a group of numbered subjects tries
-              to survive the presence of a mysterious entity known as the Anomaly.
-              As panic rises and lives are lost, one of them attempts a desperate escape -
-              only to discover the cold truth behind the experiment.
-            </p>
+          <p className="text-[14px] md:text-[15.5px] leading-[1.7] text-gray-600 mb-5">
+            Trapped inside an isolated research facility, a group of numbered subjects tries
+            to survive the presence of a mysterious entity known as the Anomaly.
+          </p>
+
+          {/* KEY CREW */}
+
+          <h3 className={labelClass}>Key Crew</h3>
+
+          <div className={listClass}>
+            {crew.map((item) => (
+              <div key={item.role}>
+                <span className="text-gray-500">{item.role}:</span> {item.name}
+              </div>
+            ))}
           </div>
 
-          {/* KEY CREW & CAST GRID */}
+          {/* CAST */}
 
-          <div className="grid grid-cols-2 gap-4 md:gap-6 w-full mb-4 md:mb-5">
+          <h3 className={`${labelClass} mt-4`}>Cast</h3>
 
-            {/* KEY CREW */}
-
-            <div>
-              <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
-                Key Crew
-              </h3>
-
-              <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-                <div>
-                  <span className="text-gray-500">Director:</span> Masha Shaposhnikova
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Producer & Editing:</span> Veranika Isakova
-                </div>
-
-                <div>
-                  <span className="text-gray-500">DOP & Editing:</span> Max Hertz Lomakin
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Sound:</span> Hassibullah Kushkaki
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Music:</span> Berke Baha Dikmen
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Art Department:</span> Veranika Isakova, Zofia Sanjuan - Janiec, Dimitris Matthaiou, Orlando Andersson
-                </div>
+          <div className={listClass}>
+            {cast.map((item) => (
+              <div key={item.role}>
+                <span className="text-gray-500">{item.role}:</span> {item.name}
               </div>
-            </div>
-
-            {/* CAST */}
-
-            <div>
-              <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
-                Cast
-              </h3>
-
-              <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-                <div>
-                  <span className="text-gray-500">Sara Smit:</span> Ines Angelova
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Rob:</span> Robert Boerleider
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Leo:</span> Lu Wang
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Bodi:</span> Grace Kimasi
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Billy:</span> Bill Stevenson
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+
+          <div className="w-[60%] max-w-[240px] h-px bg-gray-200 my-4 md:my-5" />
 
           {/* META INFO */}
 
-          <div className="text-[12.5px] md:text-[13.5px] text-gray-500 mb-5 md:mb-6 leading-relaxed">
-            <div>
-              <strong className="text-[#171717]">Team:</strong> MM Film
-            </div>
-
-            <div>
-              <strong className="text-[#171717]">Festival:</strong> The 48 Hour Film Project Rotterdam 2026
-            </div>
-
-            <div>
-              <strong className="text-[#171717]">Festival recognition:</strong> Best Art Direction & Best Sound Design nominations
-            </div>
+          <div className={listClass}>
+            {meta.map((item) => (
+              <div key={item.role}>
+                <span className="text-gray-500">{item.role}:</span> {item.name}
+              </div>
+            ))}
           </div>
+
+          <a
+            href="https://www.imdb.com/title/tt50440542/?ref_=nm_knf_t_1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 text-[13.5px] md:text-[14.5px] text-[#4A4EFF] hover:opacity-70 transition"
+          >
+            IMDb
+          </a>
         </div>
       </section>
 

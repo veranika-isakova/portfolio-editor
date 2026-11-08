@@ -15,19 +15,22 @@ export default function AboutPage() {
 
         {/* INTRODUCTION */}
         <div className="flex flex-col items-start">
-          <h1 className="text-3xl md:text-5xl tracking-tight font-medium mb-6">
-            Veranika Isakova
-          </h1>
 
-          <p className="text-base md:text-lg leading-relaxed text-[#676F80]">
-            Film & Video Editor working across fiction, documentary, commercial projects and short-form content. 
-            Interested in visual storytelling, rhythm and the relationship between image and sound. 
-            With a background in software development, I combine a technical perspective with a creative approach to editing.    
-          </p>
+          <div className="space-y-4 text-base md:text-lg leading-relaxed text-[#676F80]">
+            <p>
+              Film & Video Editor based in Rotterdam, working across fiction, documentary, music and branded films.
+            </p>
+            <p>
+              I enjoy finding the right rhythm for each story and working closely with directors to bring their vision to the screen. Every project needs something different and adapting to that is part of what I like about editing.
+            </p>
+            <p>
+              My technical background helps me keep post-production organised and running smoothly, so the focus can stay on the story.
+            </p>
+            <p>
+              Available for projects in the Netherlands and remotely.
+            </p>
+          </div>
 
-        <p className="text-base md:text-lg leading-relaxed text-[#676F80]">
-            Based in Rotterdam, available for collaborations worldwide.
-          </p>
         <a
         href="/images/Veranika_Isakova_Film_Editor_CV.pdf"
         target="_blank"

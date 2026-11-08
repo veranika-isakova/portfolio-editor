@@ -5,6 +5,26 @@ import { useEffect, useState } from "react"
 export default function GoPage() {
   const [posterOpen, setPosterOpen] = useState(false)
 
+  const crew = [
+    { role: "Director / Producer", name: "Carlos Montenegro" },
+    { role: "Co-Director", name: "Natisa Jones" },
+    { role: "Director of Photography", name: "Zbigniew Zielinski" },
+    { role: "Editors", name: "Veranika Isakova, Carlos Montenegro" },
+    { role: "Colour Grader", name: "Pieter de Pagie" },
+    { role: "Sound Recordist / Composer", name: "Morgan Whitney" },
+    { role: "Composer", name: "Matthew Torres" },
+  ]
+
+  const cast = [
+    { role: "David", name: "Carlos Montenegro" },
+    { role: "Nick", name: "Shreyas Bettadapura" },
+  ]
+
+  const labelClass =
+    "text-[10.5px] md:text-[11px] tracking-[0.3em] uppercase text-gray-500 mb-1"
+  const listClass =
+    "text-[13px] md:text-[14px] leading-[1.6] text-[#171717]"
+
   useEffect(() => {
     if (!posterOpen) return
 
@@ -46,125 +66,80 @@ export default function GoPage() {
 
         {/* DESCRIPTION & CREDITS */}
 
-        <div className="w-full max-w-[540px] flex flex-col items-start text-left">
+        <div className="w-full max-w-[540px] flex flex-col items-center text-center">
 
-          <h1 className="text-[#4A4EFF] text-2xl md:text-3xl font-bold tracking-widest uppercase mb-1.5 md:mb-2">
+          <h1 className="text-[#4A4EFF] text-[18px] md:text-[22px] font-semibold tracking-[0.12em] uppercase mb-3 md:mb-4">
             Letting Go
           </h1>
 
-
           {/* SYNOPSIS */}
 
-          <div className="mb-4 md:mb-5">
+          <p className="text-[14px] md:text-[15.5px] leading-[1.7] text-gray-600 mb-5">
+            Trapped in a cycle of grief, David uses a futuristic device
+            to relive memories of his deceased boyfriend, but he must
+            choose between a perfect digital dream and the painful
+            reality of letting go.
+          </p>
 
-            <p className="text-[13.5px] md:text-[14.5px] leading-relaxed text-gray-600 m-0">
-              Trapped in a cycle of grief, David uses a futuristic device
-              to relive memories of his deceased boyfriend, but he must
-              choose between a perfect digital dream and the painful
-              reality of letting go.
-            </p>
+          {/* KEY CREW */}
 
+          <h3 className={labelClass}>Key Crew</h3>
+
+          <div className={listClass}>
+            {crew.map((item) => (
+              <div key={item.role}>
+                <span className="text-gray-500">{item.role}:</span> {item.name}
+              </div>
+            ))}
           </div>
 
+          {/* CAST */}
 
-          {/* KEY CREW & CAST GRID */}
+          <h3 className={`${labelClass} mt-4`}>Cast</h3>
 
-          <div className="grid grid-cols-2 gap-4 md:gap-6 w-full mb-4 md:mb-5">
-
-            {/* KEY CREW */}
-
-            <div>
-
-              <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
-                Key Crew
-              </h3>
-
-              <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-
-                <div>
-                  <span className="text-gray-500">Director / Producer:</span>{" "}
-                  Carlos Montenegro
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Co-Director:</span>{" "}
-                  Natisa Jones
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Director of Photography:</span>{" "}
-                  Zbigniew Zielinski
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Editors:</span>{" "}
-                  Veranika Isakova, Carlos Montenegro
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Colour Grader:</span>{" "}
-                  Pieter de Pagie
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Sound Recordist / Composer:</span>{" "}
-                  Morgan Whitney
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Composer:</span>{" "}
-                  Matthew Torres
-                </div>
-
+          <div className={listClass}>
+            {cast.map((item) => (
+              <div key={item.role}>
+                <span className="text-gray-500">{item.role}:</span> {item.name}
               </div>
-
-            </div>
-
-
-            {/* CAST */}
-
-            <div>
-
-              <h3 className="text-[#4A4EFF] text-[11px] md:text-[12px] font-bold tracking-widest uppercase mb-1.5 md:mb-2">
-                Cast
-              </h3>
-
-              <div className="text-[12.5px] md:text-[13.5px] leading-relaxed text-[#171717]">
-
-                <div>
-                  <span className="text-gray-500">David:</span>{" "}
-                  Carlos Montenegro
-                </div>
-
-                <div>
-                  <span className="text-gray-500">Nick:</span>{" "}
-                  Shreyas Bettadapura
-                </div>
-
-              </div>
-
-            </div>
-
+            ))}
           </div>
+
+          <div className="w-[60%] max-w-[240px] h-px bg-gray-200 my-4 md:my-5" />
 
           {/* META INFO */}
 
-          <div className="text-[12.5px] md:text-[13.5px] text-gray-500 mb-5 md:mb-6 leading-relaxed">
-            <span className="coming-soon">
-              Festival premiere soon
-            </span>
-              <a
-                href="https://filmfreeway.com/Lettinggofilm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-website"
-              >
-              View on FilmFreeway
-            </a>
-          </div>
+          <p className="text-[11px] md:text-[12px] tracking-[0.3em] uppercase text-gray-500">
+            Festival premiere soon
+          </p>
 
+          <a
+            href="https://filmfreeway.com/Lettinggofilm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 text-[13.5px] md:text-[14.5px] text-[#4A4EFF] hover:opacity-70 transition"
+          >
+            FilmFreeway
+          </a>
         </div>
 
+      </section>
+
+
+      {/* TRAILER */}
+
+      <section className="w-full max-w-[1140px] mx-auto px-5 md:px-8 mb-10 md:mb-14 box-border">
+        <div className="w-full aspect-video bg-black">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/xSDVdTjuQwk?rel=0"
+            title="Letting Go (2026) | Official Trailer"
+            className="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <p className="mt-2 text-[13px] md:text-[14px] text-gray-500">Official Trailer</p>
       </section>
 
 

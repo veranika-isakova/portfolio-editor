@@ -1,4 +1,19 @@
+import Link from "next/link"
 import ProjectCard from "./components/ProjectCard"
+
+// Фильтры на главной. Новый раздел добавляется здесь одной строкой.
+// value совпадает с полем category у проектов ниже; null = все проекты.
+const categories = [
+  { name: "All", value: null },
+  { name: "Fiction", value: "fiction" },
+  { name: "Documentary", value: "documentary" },
+  { name: "Music", value: "music" },
+  { name: "Branded", value: "branded" },
+  { name: "Experimental", value: "experimental" },
+]
+
+const filterClass =
+  "transition-colors duration-200 hover:text-black focus:outline-none focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4A4EFF]"
 
 export default async function Home({
   searchParams,
@@ -6,7 +21,7 @@ export default async function Home({
   searchParams: Promise<{ category?: string }>
 }) {
   const params = await searchParams
-  const category = params.category
+  const category = params.category ?? null
 
   const projects = [
     {
@@ -39,17 +54,10 @@ export default async function Home({
     },
     {
       category: "music",
-      href: "/projects/pavel",
-      image: "/images/pavel/cover.jpg",
-      title: "Pavel Fakhrtdinov",
-      subtitle: "Peaceful Lights Music Show",
-    },
-    {
-      category: "music",
-      href: "/projects/musia",
+      href: "/projects/lights",
       image: "/images/musia/cover.jpg",
-      title: "Musia Totibadze",
-      subtitle: "Peaceful Lights Music Show",
+      title: "Peaceful Lights",
+      subtitle: "Live performances & Short-form",
     },
     {
       category: "branded",
@@ -59,14 +67,14 @@ export default async function Home({
       subtitle: "Spec Ad",
     },
    {
-      category: "visuals",
+      category: "experimental",
       href: "/projects/ny",
       image: "/images/ny/cover.jpg",
       title: "City Drift",
       subtitle: "Cinematic portrait film",
     },
     {
-      category: "visuals",
+      category: "experimental",
       href: "/projects/dream",
       image: "/images/dream/cover.jpg",
       title: "In a Dream Maybe",
@@ -77,7 +85,7 @@ export default async function Home({
       href: "/projects/lime",
       image: "/images/lime/cover.jpg",
       title: "Lime",
-      subtitle: "Studio campaign",
+      subtitle: "Spec Ad",
     },
   ]
 
@@ -86,7 +94,22 @@ export default async function Home({
     : projects
 
   return (
-    <div className="home-grid">
+    <>
+      <nav className="category-filter" aria-label="Filter projects">
+        {categories.map((item) => (
+          <Link
+            key={item.name}
+            href={item.value ? `/?category=${item.value}` : "/"}
+            className={`${filterClass} ${
+              category === item.value ? "text-black" : "text-gray-300"
+            }`}
+          >
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+
+      <div className="home-grid">
       {visibleProjects.map((project) => (
         <ProjectCard
           key={project.href}
@@ -96,6 +119,7 @@ export default async function Home({
           subtitle={project.subtitle}
         />
       ))}
-    </div>
+      </div>
+    </>
   )
 }

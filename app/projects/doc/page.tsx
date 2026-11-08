@@ -27,7 +27,7 @@ export default function DreamPage() {
           <p>
           Directed by Dmitry Grigoriev.
           </p>
-          <span className="coming-soon">Coming Soon</span>
+          <span className="coming-soon">In Post-Production</span>
 
         </div>
 

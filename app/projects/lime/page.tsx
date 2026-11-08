@@ -1,4 +1,8 @@
 export default function LimePage() {
+  const credits = [
+    { role: "Edit, Colour & Sound", name: "Veranika Isakova" },
+    { role: "Made at", name: "Bang Bang Education" },
+  ]
 
   return (
     <main className="project-page">
@@ -31,8 +35,16 @@ export default function LimePage() {
           <h2> Lime</h2>
 
           <p>
-          Visual campaign film for LIME Studio Collection.
+          Spec commercial created for LIME Studio Collection.
           </p>
+
+          <div className="mt-5 text-[14px] md:text-[15px] leading-[1.9] text-[#171717]">
+            {credits.map((credit) => (
+              <div key={credit.role}>
+                <span className="text-gray-500">{credit.role}:</span> {credit.name}
+              </div>
+            ))}
+          </div>
 
         </div>
 

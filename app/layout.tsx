@@ -36,12 +36,12 @@ export default function RootLayout({
           <div className="flex items-center gap-5 shrink-0 mobile-brand">
 
             <Link href="/" className="nav-link">
-              <h1 className="text-3xl tracking-tight leading-none hover:opacity-70 transition">
+              <h1 className="text-2xl md:text-3xl tracking-tight leading-none hover:opacity-70 transition">
                 Veranika Isakova
               </h1>
             </Link>
 
-            <p className="mt-[3px] text-lg text-gray-300 leading-none tracking-wide">
+            <p className="brand-subtitle mt-[3px] text-base md:text-lg text-gray-300 leading-none tracking-wide">
               Film Editor
             </p>
 

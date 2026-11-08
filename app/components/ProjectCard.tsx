@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import type { MouseEvent } from "react"
 
 type Props = {
   href: string
@@ -13,6 +13,8 @@ type Props = {
   className?: string
 }
 
+const CLOSE_EVENT = "close-project-card"
+
 export default function ProjectCard({
   href,
   id,
@@ -21,127 +23,56 @@ export default function ProjectCard({
   subtitle,
   className = "",
 }: Props) {
-
-  const pathname = usePathname()
-
-  const [isMobile, setIsMobile] = useState(false)
   const [revealed, setRevealed] = useState(false)
 
+  // Only one card stays revealed at a time
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 768)
+    const close = () => setRevealed(false)
+    window.addEventListener(CLOSE_EVENT, close)
+    return () => window.removeEventListener(CLOSE_EVENT, close)
   }, [])
 
-  useEffect(() => {
-    setRevealed(false)
-  }, [pathname])
+  // Touch screens: first tap shows the title and the blue dot, second tap opens the project.
+  // Mouse: hover shows them (CSS), click opens right away.
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    const isTouch = window.matchMedia("(hover: none)").matches
+    if (!isTouch || revealed) return
 
-  useEffect(() => {
-
-    const closeCard = () => {
-      setRevealed(false)
-    }
-
-    window.addEventListener(
-      "close-project-card",
-      closeCard
-    )
-
-    return () => {
-      window.removeEventListener(
-        "close-project-card",
-        closeCard
-      )
-    }
-
-  }, [])
-
-  const openCard = () => {
-
-    window.dispatchEvent(
-      new Event("close-project-card")
-    )
-
+    event.preventDefault()
+    window.dispatchEvent(new Event(CLOSE_EVENT))
     setRevealed(true)
   }
 
-  if (isMobile) {
-
-    return (
-
-        <div
-          id={id}
-          className={`project-card ${className}`}
-          onClick={openCard}
-        >
-
-        {revealed ? (
-
-          <div className="mobile-overlay">
-
-            <h2>
-              <span className="title-main">{title}</span>
-              <br />
-              <span className="title-sub">{subtitle}</span>
-            </h2>
-
-            <Link
-              href={href}
-              className="mobile-play"
-              onClick={(e) => e.stopPropagation()}
-            >
-              VIEW
-            </Link>
-
-          </div>
-
-        ) : (
-
-          <img
-            src={image}
-            alt={title}
-            draggable={false}
-            style={
-              href === "/projects/lore"
-                ? { objectPosition: "90% center" }
-                : undefined
-            }
-          />
-        )}
-
-      </div>
-
-    )
-  }
-
   return (
-
     <Link
       id={id}
       href={href}
-      className={`project-card ${className}`}
+      onClick={handleClick}
+      className={`project-card-link ${className}`}
     >
+      <div className={`project-card ${revealed ? "revealed" : ""}`}>
+        <img
+          src={image}
+          alt={title}
+          draggable={false}
+          style={
+            href === "/projects/lore"
+              ? { objectPosition: "90% center" }
+              : undefined
+          }
+        />
 
-      <img
-        src={image}
-        alt={title}
-        style={
-          href === "/projects/lore"
-            ? { objectPosition: "90% center" }
-            : undefined
-        }
-      />
+        {/* Title + blue dot: on hover (mouse) or after the first tap (touch) */}
+        <div className="overlay">
+          <h2>
+            <span className="title-main">{title}</span>
+            <br />
+            <span className="title-sub">{subtitle}</span>
+          </h2>
+        </div>
 
-      <div className="overlay">
-        <h2>
-          <span className="title-main">{title}</span>
-          <br />
-          <span className="title-sub">{subtitle}</span>
-        </h2>
+        <div className="view-circle" />
       </div>
-
-      <div className="view-circle" />
-
     </Link>
-
   )
 }

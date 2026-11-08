@@ -6,6 +6,14 @@ export default function DreamPage() {
     "/images/lore/home.jpg",
   ]
 
+  const credits: { role: string; name: string; highlight?: boolean }[] = [
+    { role: "Cinematography", name: "Marina Basistaya" },
+    { role: "Edit, Colour & Sound Design", name: "Veranika Isakova" },
+    { role: "Model", name: "Aidan Will" },
+    { role: "Made for", name: "rec.stuudio" },
+    { role: "Location", name: "LA, California" },
+  ]
+
   return (
     <main className="project-page">
 
@@ -36,6 +44,19 @@ export default function DreamPage() {
           Spec commercial created for LORE Sublimity. 
           A story of warmth, memory and the freedom found in a single scent.
           </p>
+
+          <div className="mt-5 text-[14px] md:text-[15px] leading-[1.9] text-[#171717]">
+            {credits.map((credit) => (
+              <div key={credit.role}>
+                <span className="text-gray-500">{credit.role}:</span>{" "}
+                {credit.highlight ? (
+                  <span className="text-[#4A4EFF]">{credit.name}</span>
+                ) : (
+                  credit.name
+                )}
+              </div>
+            ))}
+          </div>
 
         </div>
 
