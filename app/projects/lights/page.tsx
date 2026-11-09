@@ -1,3 +1,4 @@
+import { FaInstagram } from "react-icons/fa"
 import PreviewVideo from "../../components/PreviewVideo"
 
 type Credit = { role: string; name: string }
@@ -194,9 +195,10 @@ export default function PeacefulLightsPage() {
                 href={video.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-3 text-sm text-black hover:text-[#4a4aff] transition-colors"
+                className="inline-flex items-center gap-2 mt-3 text-sm text-black hover:text-[#4a4aff] transition-colors"
               >
-                {video.name}
+                <FaInstagram className="text-base shrink-0" />
+                <span>{video.name}</span>
               </a>
             </div>
           ))}

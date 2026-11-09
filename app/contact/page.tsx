@@ -168,7 +168,7 @@ export default function ContactPage() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="mt-7 ml-0 inline-flex items-center justify-center h-12 bg-[#4A4EFF] text-white px-8 text-sm tracking-[0.2em] hover:opacity-90 transition cursor-pointer"
+        className="mt-7 mx-auto md:mx-0 flex md:inline-flex w-fit items-center justify-center h-12 bg-[#4A4EFF] text-white px-8 text-sm tracking-[0.2em] hover:opacity-90 transition cursor-pointer"
       >
         say hello
       </button>
@@ -205,8 +205,8 @@ export default function ContactPage() {
             </h2>
 
             <p className="text-[15px] md:text-[17px] leading-relaxed text-gray-600 mb-8">
-              Tell me about your project or write directly to{" "}
-              <span className="text-[#4A4EFF] break-all">veranika.isakova89@gmail.com</span>
+              Tell me about your project or write directly to
+              <span className="block mt-1 text-[#4A4EFF] break-all">veranika.isakova89@gmail.com</span>
             </p>
 
             <form

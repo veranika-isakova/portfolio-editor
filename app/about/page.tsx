@@ -35,7 +35,7 @@ export default function AboutPage() {
         href="/images/Veranika_Isakova_Film_Editor_CV.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="self-start ml-[92px] md:ml-[104px] inline-flex items-center justify-center h-12 mt-6 bg-[#4A4EFF] text-white px-8 text-sm tracking-[0.2em] hover:opacity-90 transition"
+        className="self-center md:self-start md:ml-[104px] inline-flex items-center justify-center h-12 mt-6 bg-[#4A4EFF] text-white px-8 text-sm tracking-[0.2em] hover:opacity-90 transition"
         >
         view my cv (pdf)
         </a>
