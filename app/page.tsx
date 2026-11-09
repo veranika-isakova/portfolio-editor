@@ -60,18 +60,18 @@ export default async function Home({
       subtitle: "Live performances & Short-form",
     },
     {
-      category: "branded",
-      href: "/projects/lore",
-      image: "/images/lore/cover.jpg",
-      title: "LORE Sublimity",
-      subtitle: "Spec Ad",
-    },
-   {
       category: "visuals",
       href: "/projects/ny",
       image: "/images/ny/cover.jpg",
       title: "City Drift",
       subtitle: "Cinematic portrait film",
+    },
+    {
+      category: "branded",
+      href: "/projects/lore",
+      image: "/images/lore/cover.jpg",
+      title: "LORE Sublimity",
+      subtitle: "Spec Ad",
     },
     {
       category: "visuals",
