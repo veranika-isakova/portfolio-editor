@@ -168,7 +168,7 @@ export default function ContactPage() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="mt-7 ml-0 bg-[#4A4EFF] text-white px-8 py-3 text-sm tracking-[0.2em] hover:opacity-90 transition cursor-pointer"
+        className="mt-7 ml-0 inline-flex items-center justify-center h-12 bg-[#4A4EFF] text-white px-8 text-sm tracking-[0.2em] hover:opacity-90 transition cursor-pointer"
       >
         say hello
       </button>
@@ -267,9 +267,9 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#4A4EFF] text-white px-14 py-4 tracking-[0.28em] hover:opacity-90 transition cursor-pointer disabled:opacity-60"
+                className="inline-flex items-center justify-center h-12 bg-[#4A4EFF] text-white px-14 tracking-[0.28em] hover:opacity-90 transition cursor-pointer disabled:opacity-60"
               >
-                {isSubmitting ? "SENDING..." : "SEND"}
+                {isSubmitting ? "sending..." : "send"}
               </button>
             </form>
           </div>

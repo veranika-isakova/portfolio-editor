@@ -9,7 +9,7 @@ const categories = [
   { name: "Documentary", value: "documentary" },
   { name: "Music", value: "music" },
   { name: "Branded", value: "branded" },
-  { name: "Experimental", value: "experimental" },
+  { name: "Visuals", value: "visuals" },
 ]
 
 const filterClass =
@@ -67,14 +67,14 @@ export default async function Home({
       subtitle: "Spec Ad",
     },
    {
-      category: "experimental",
+      category: "visuals",
       href: "/projects/ny",
       image: "/images/ny/cover.jpg",
       title: "City Drift",
       subtitle: "Cinematic portrait film",
     },
     {
-      category: "experimental",
+      category: "visuals",
       href: "/projects/dream",
       image: "/images/dream/cover.jpg",
       title: "In a Dream Maybe",

@@ -2,7 +2,7 @@
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white text-black px-6 md:px-14 py-10 md:py-16">
-      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center md:items-end">
 
         {/* PHOTO */}
         <div className="w-full max-w-[950px] mx-auto md:mx-0">
@@ -16,7 +16,7 @@ export default function AboutPage() {
         {/* INTRODUCTION */}
         <div className="flex flex-col items-start">
 
-          <div className="space-y-4 text-base md:text-lg leading-relaxed text-[#676F80]">
+          <div className="space-y-3 text-base md:text-lg leading-relaxed text-[#676F80]">
             <p>
               Film & Video Editor based in Rotterdam, working across fiction, documentary, music and branded films.
             </p>
@@ -35,7 +35,7 @@ export default function AboutPage() {
         href="/images/Veranika_Isakova_Film_Editor_CV.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block mt-7 bg-[#4A4EFF] text-white px-8 py-3 text-sm tracking-[0.2em] hover:opacity-90 transition"
+        className="self-start ml-[92px] md:ml-[104px] inline-flex items-center justify-center h-12 mt-6 bg-[#4A4EFF] text-white px-8 text-sm tracking-[0.2em] hover:opacity-90 transition"
         >
         view my cv (pdf)
         </a>
