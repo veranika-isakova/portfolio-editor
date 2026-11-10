@@ -1072,3 +1072,13 @@ body {
 .project-website:hover {
   color: #4A4EFF;
 }
+/* Fullscreen video: show the whole frame (vertical promos stay vertical) */
+video:fullscreen {
+  object-fit: contain !important;
+  background: #000;
+}
+
+video:-webkit-full-screen {
+  object-fit: contain !important;
+  background: #000;
+}

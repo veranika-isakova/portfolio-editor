@@ -1,6 +1,9 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+
+// Event name used so only one video plays with sound at a time
+const PLAY_EVENT = "preview-video-play"
 
 type Props = {
   src: string
@@ -13,10 +16,35 @@ type Props = {
 export default function PreviewVideo({ src, poster, className = "" }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [preview, setPreview] = useState(true)
+  // true once the viewer has pressed Play (the silent autoplay preview does not count)
+  const startedByUser = useRef(false)
+
+  const stopOtherVideos = () => {
+    window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: videoRef.current }))
+  }
+
+  // When another video on the page starts playing, stop this one
+  useEffect(() => {
+    const handleOtherPlay = (event: Event) => {
+      const video = videoRef.current
+      if (!video || (event as CustomEvent).detail === video) return
+      video.pause()
+    }
+    window.addEventListener(PLAY_EVENT, handleOtherPlay)
+    return () => window.removeEventListener(PLAY_EVENT, handleOtherPlay)
+  }, [])
+
+  // Tell the other videos that this one started playing (not the silent preview loop)
+  const handlePlay = () => {
+    if (startedByUser.current) stopOtherVideos()
+  }
 
   const startFromBeginning = () => {
     const video = videoRef.current
     if (!video) return
+
+    startedByUser.current = true
+    stopOtherVideos()
 
     video.currentTime = 0
     video.muted = false
@@ -36,6 +64,10 @@ export default function PreviewVideo({ src, poster, className = "" }: Props) {
         loop
         playsInline
         controls={!preview}
+        onPlay={handlePlay}
+        controlsList="nodownload"
+        disablePictureInPicture
+        onContextMenu={(event) => event.preventDefault()}
         className={className}
       />
 
